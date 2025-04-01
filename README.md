@@ -20,10 +20,35 @@ layout:
 
 # Welcome
 
-Welcome to the GitBook Starter Template! Here you'll get an overview of all the amazing features GitBook offers to help you build beautiful, interactive documentation.
+## 🚀 Welcome to **Glitch Studios Documentation**
 
-You'll see some of the best parts of GitBook in action — and find help on how you can turn this template into your own.
+Welcome to **Glitch Studios**, your go to source for high quality FiveM resources and game development tools! Our mission is to provide **powerful, efficient, and customizable** solutions that push the boundaries of what’s possible in FiveM development.
 
-### Jump right in
+### 📖 What You’ll Find Here
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Create your first site</td><td></td><td></td><td><a href="getting-started/quickstart.md">quickstart.md</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics of GitBook</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Publish your docs</strong></td><td>Share your docs online</td><td></td><td></td><td><a href="getting-started/publish-your-docs.md">publish-your-docs.md</a></td></tr></tbody></table>
+This documentation serves as a complete guide to all Glitch Studios resources, including:\
+✅ **Setup Instructions** – Easy to follow installation guides.\
+✅ **Exports & APIs** – Integrate seamlessly with your existing scripts.\
+✅ **Customization Options** – Tailor resources to fit your server’s needs.\
+✅ **Troubleshooting & FAQs** – Quick fixes for common issues.
+
+### 🎯 Our Vision
+
+At **Glitch Studios**, we believe in **innovation, collaboration and quality**. Whether you're a solo developer or managing a full scale FiveM server, our tools are built to **enhance gameplay, optimize performance and streamline development**.
+
+### 💬 Need Help?
+
+🔹 **Join Our Community:** [Glitch Studios Discord](https://discord.gg/PAQX8ANEfw)\
+🔹 **Report Issues & Bugs:** Use our GitHub issue tracker or open a support ticket.
+
+Let's build something amazing together. Welcome to **Glitch Studios**! 🚀
+
+### 👥 We're Looking for More Help!
+
+As **Glitch Studios** continues to grow, we are actively looking to expand our team. If you have experience in **FiveM development**, **Lua scripting**, or **game design** and are passionate about creating high quality resources, we would love to have you join our development team.
+
+#### Interested in Joining?
+
+If you're interested in contributing to the future of **Glitch Studios**, please don't hesitate to **open a ticket** in our [Discord server](https://discord.gg/uZ7bJwtM4c). Tell us about your skills and how you can contribute, and we will get in touch with you!
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Create your first site</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics of GitBook</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Publish your docs</strong></td><td>Share your docs online</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
