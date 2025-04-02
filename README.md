@@ -50,5 +50,3 @@ As **Glitch Studios** continues to grow, we are actively looking to expand our t
 #### Interested in Joining?
 
 If you're interested in contributing to the future of **Glitch Studios**, please don't hesitate to **open a ticket** in our [Discord server](https://discord.com/invite/PAQX8ANEfw). Tell us about your skills and how you can contribute, and we will get in touch with you!
-
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Create your first site</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics of GitBook</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Publish your docs</strong></td><td>Share your docs online</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
