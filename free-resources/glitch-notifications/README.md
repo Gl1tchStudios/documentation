@@ -9,6 +9,10 @@ description: >-
 
 ## Glitch Notifications System [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail.png" alt=""><figcaption></figcaption></figure>
+
+Video Showcase: [https://youtu.be/DZlsYaucRYQ](https://youtu.be/DZlsYaucRYQ)
+
 Github Resource: [https://github.com/Gl1tchStudios/glitch-notifications](https://github.com/Gl1tchStudios/glitch-notifications)
 
 ### Overview
