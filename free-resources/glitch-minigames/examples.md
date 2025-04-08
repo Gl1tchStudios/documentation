@@ -11,7 +11,7 @@ Below are quick usage examples for each minigame included in **Glitch Minigames*
 #### 🔐 Firewall Pulse
 
 ```lua
-local success = exports['glitch-minigames']:StartFirewallPulse(function(success)
+local success = exports['glitch-minigames']:StartFirewallPulse()
     if success then
         print("You completed the hack!")
     else
@@ -45,9 +45,9 @@ end
 #### 🎵 Circuit Rhythm
 
 ```lua
-local success = exports['glitch-minigames']:StartCircuitRhythm(function(success, score, maxCombo)
+local success = exports['glitch-minigames']:StartCircuitRhythm()
     if success then
-        print("Rhythm game completed! Score: " .. score .. ", Max combo: " .. maxCombo)
+        print("Rhythm game completed!")
     else
         print("Rhythm game failed")
     end
@@ -64,7 +64,7 @@ local success = exports['glitch-minigames']:StartCircuitRhythm(4, {'A','S','D','
 #### ⚡ Surge Override
 
 ```lua
-local success = exports['glitch-minigames']:StartSurgeOverride(function(success)
+local success = exports['glitch-minigames']:StartSurgeOverride()
     if success then
         print("Surge Override successful!")
     else
