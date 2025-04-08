@@ -10,7 +10,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/glitchstudiosthumbnail2 copy.png" alt=""><figcaption></figcaption></figure>
 
-Video Showcase: COMING SOON
+Video Showcase: [https://youtu.be/NSt7NBNLp2o](https://youtu.be/NSt7NBNLp2o)
 
 Github Resource: [https://github.com/Gl1tchStudios/glitch-minigames](https://github.com/Gl1tchStudios/glitch-minigames)
 
@@ -32,7 +32,7 @@ Github Resource: [https://github.com/Gl1tchStudios/glitch-minigames](https://git
 
 ***
 
-### 📜 Credits
+### ⭐ Credits
 
 * **Developed by** Luma in collaboration with Glitch Studios
 
