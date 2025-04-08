@@ -12,71 +12,6 @@ Enable Glitch notification system integration.
 
 The following exports are available for use in your scripts:
 
-### StartDrilling
-
-Starts the Fleeca Bank drilling minigame.
-
-```lua
-exports['glitch-minigames']:StartDrilling()
-```
-
-Returns:
-
-* success (boolean): Whether the drilling was successful
-
-### StartCircuitBreaker
-
-Starts the Circuit Breaker hacking minigame.
-
-```lua
-exports['glitch-minigames']:StartCircuitBreaker(levelNumber, difficultyLevel)
-```
-
-Parameters:
-
-* levelNumber (number): Level layout to use (1-5)
-* difficultyLevel (number): Difficulty setting (0-3)  \
-  Returns:
-* success (boolean): Whether the hack was successful
-
-### StartDataCrack
-
-Starts the Data Crack hacking minigame.
-
-```lua
-exports['glitch-minigames']:StartDataCrack(difficulty)
-```
-
-Parameters:
-
-* difficulty (number): Number of layers to crack (default: 3)  \
-  Returns:
-* success (boolean): Whether the hack was successful
-
-### StartBruteForce
-
-Starts the Brute Force hacking minigame.
-
-```lua
-exports['glitch-minigames']:StartBruteForce()
-```
-
-Returns:
-
-* success (boolean): Whether the hack was successful
-
-### StartPlasmaDrilling
-
-Starts the Plasma Drilling minigame.
-
-```lua
-exports['glitch-minigames']:StartPlasmaDrilling()
-```
-
-Returns:
-
-* success (boolean): Whether the drilling was successful
-
 ### StartFirewallPulse
 
 Starts the Firewall Pulse hacking minigame.
@@ -87,15 +22,15 @@ exports['glitch-minigames']:StartFirewallPulse(requiredHacks, initialSpeed, safe
 
 Parameters:
 
-* requiredHacks (number): Number of successful pulses needed
-* initialSpeed (number): Starting speed of the pulse
-* safeZoneSize (number): Size of the safe zone (1-100)
-* moveSpeed (number): Speed of safe zone movement
-* timeLimit (number): Time limit in seconds
-* progressMultiplier (number): Success progress multiplier
-* dangerMultiplier (number): Failure penalty multiplier  \
-  Returns:
-* success (boolean): Whether the hack was successful
+| Parameter            | Default | Description                                                |
+| -------------------- | ------- | ---------------------------------------------------------- |
+| requiredHacks        | 3       | Number of successful hacks needed to complete the minigame |
+| initialSpeed         | 2       | Starting speed of the pulse                                |
+| maxSpeed             | 10      | Maximum speed the pulse can reach                          |
+| timeLimit            | 10      | Time limit in seconds for each hack attempt                |
+| safeZoneMinWidth     | 40      | Minimum width of the safe zone (in pixels)                 |
+| safeZoneMaxWidth     | 120     | Starting width of the safe zone (in pixels)                |
+| safeZoneShrinkAmount | 10      | How much the safe zone shrinks after each successful hack  |
 
 ### StartBackdoorSequence
 
@@ -107,17 +42,120 @@ exports['glitch-minigames']:StartBackdoorSequence(requiredSequences, sequenceLen
 
 Parameters:
 
-* requiredSequences (number): Number of sequences to complete
-* sequenceLength (number): Length of each sequence
-* timeLimit (number): Time limit per sequence in seconds
-* maxAttempts (number): Maximum failed attempts allowed
-* timePenalty (number): Time penalty multiplier for failures
-* minKeys (number): Minimum simultaneous keys per sequence
-* maxKeys (number): Maximum simultaneous keys per sequence
-* possibleKeys (table): Array of possible keys to use
-* keyHintText (string): Text shown to explain available keys  \
-  Returns:
-* success (boolean): Whether the hack was successful
+| requiredSequences   | 3                             | Number of successful sequences needed to complete the minigame |
+| ------------------- | ----------------------------- | -------------------------------------------------------------- |
+| sequenceLength      | 5                             | Total number of keys in the sequence                           |
+| timeLimit           | 15                            | Time limit in seconds for each sequence attempt                |
+| maxAttempts         | 3                             | Maximum number of input mistakes allowed per sequence          |
+| timePenalty         | 1.0                           | Time deducted (in seconds) when a wrong key is pressed         |
+| minSimultaneousKeys | 1                             | Minimum number of keys shown at once for each stage            |
+| maxSimultaneousKeys | 3                             | Maximum number of keys shown at once for each stage            |
+| customKeys          | W,A,S,D,arrows,0-9            | Array of keys to use in sequences (e.g., {'W','A','S','D'})    |
+| keyHintText         | "W, A, S, D, ←, →, ↑, ↓, 0-9" | Text displayed to hint available keys                          |
+
+### StartCircuitRhythm
+
+Starts the Circuit Rhythm hacking minigame.
+
+```lua
+exports['glitch-minigames']:StartCircuitRhythm(lanes, keys, noteSpeed, noteSpawnRate, requiredNotes, difficulty, maxWrongKeys, maxMissedNotes)
+```
+
+Parameters:
+
+| Parameter      | Default            | Description                                                            |
+| -------------- | ------------------ | ---------------------------------------------------------------------- |
+| lanes          | 4                  | Number of lanes for notes to fall down                                 |
+| keys           | \['A','S','D','F'] | Array of keys to use for each lane (must match number of lanes)        |
+| noteSpeed      | 150                | Speed at which notes fall (higher = faster)                            |
+| noteSpawnRate  | 1000               | Milliseconds between note spawns (lower = more frequent)               |
+| requiredNotes  | 20                 | Number of notes player must hit to complete the minigame               |
+| difficulty     | "normal"           | Difficulty level: "easy", "normal", or "hard" (affects timing windows) |
+| maxWrongKeys   | 5                  | Maximum wrong key presses allowed before failure                       |
+| maxMissedNotes | 3                  | Maximum notes that can be missed before failure                        |
+
+### StartSurgeOverride
+
+Starts the Surge Override hacking minigame.
+
+```lua
+exports['glitch-minigames']:StartSurgeOverride(possibleKeys, requiredPresses, decayRate, multiKeyMode, keyCombinations)
+```
+
+Parameters:
+
+| Parameter       | Default                      | Description                                                                    |
+| --------------- | ---------------------------- | ------------------------------------------------------------------------------ |
+| possibleKeys    | \['E']                       | Array of possible keys for the game to randomly select from (single-key mode)  |
+| requiredPresses | 50                           | Number of key presses needed to complete the minigame                          |
+| decayRate       | 2                            | How quickly the progress bar depletes when not pressing keys (higher = faster) |
+| multiKeyMode    | false                        | Enable multiple simultaneous key press mode                                    |
+| keyCombinations | \[\['E','F'],\['SPACE','B']] | Array of key combinations for multi-key mode                                   |
+
+### StartCircuitBreaker
+
+Starts the Circuit Breaker hacking minigame.
+
+```lua
+exports['glitch-minigames']:StartCircuitBreaker(levelNumber, difficultyLevel)
+```
+
+Parameters:
+
+| Parameter        | Default | Description                                                       |
+| ---------------- | ------- | ----------------------------------------------------------------- |
+| levelNumber      | 1       | Circuit board layout (1-6)                                        |
+| difficultyLevel  | 0       | Difficulty level (0-3) affects cursor speed and disconnect chance |
+| cursorSpeed      | 0.0085  | Speed of cursor movement (0.0085-0.01)                            |
+| delayStart       | 1000    | Delay before minigame starts (ms)                                 |
+| minDelay         | 2000    | Minimum delay for failure screen (ms)                             |
+| maxDelay         | 4000    | Maximum delay for failure screen (ms)                             |
+| disconnectChance | 0.1     | Chance of random disconnects (0-1)                                |
+
+### StartDataCrack
+
+Starts the Data Crack hacking minigame.
+
+```lua
+exports['glitch-minigames']:StartDataCrack(difficulty)
+```
+
+Parameters:
+
+| Parameter  | Default | Description                                   |
+| ---------- | ------- | --------------------------------------------- |
+| difficulty | 3       | Difficulty level (1-5) affects movement speed |
+
+### StartBruteForce
+
+Starts the Brute Force hacking minigame.
+
+```lua
+exports['glitch-minigames']:StartBruteForce()
+```
+
+Returns:
+
+| Parameter | Default | Description                                      |
+| --------- | ------- | ------------------------------------------------ |
+| numLives  | 5       | Number of attempts allowed before failure (1-10) |
+
+### StartDrilling
+
+Starts the Fleeca Bank drilling minigame.
+
+```lua
+exports['glitch-minigames']:StartDrilling()
+```
+
+Returns:
+
+| Parameter          | Default | Description                                                                    |
+| ------------------ | ------- | ------------------------------------------------------------------------------ |
+| difficulty         | 1       | Difficulty level (1-3) affects temperature rise rate and optimal pressure zone |
+| numLayers          | 3       | Number of material layers to drill through                                     |
+| timeLimit          | 60      | Time limit in seconds (0 for no limit)                                         |
+| drillBitDurability | 100     | Starting durability of drill bit (0-100)                                       |
 
 ### StartVarHack
 
@@ -129,10 +167,23 @@ exports['glitch-minigames']:StartVarHack(blocks, speed)
 
 Parameters:
 
-* blocks (number): Number of blocks to memorize (default: 5)
-* speed (number): Speed of the game (default: 5)  \
-  Returns:
-* success (boolean): Whether the hack was successful
+| blocks | 5 | Number of blocks to memorize (1-10)               |
+| ------ | - | ------------------------------------------------- |
+| speed  | 5 | Time limit in seconds for completing the sequence |
+
+### StartPlasmaDrilling
+
+Starts the Plasma Drilling minigame.
+
+```lua
+exports['glitch-minigames']:StartPlasmaDrilling()
+```
+
+Returns:
+
+| Parameter  | Default | Description                                                                       |
+| ---------- | ------- | --------------------------------------------------------------------------------- |
+| difficulty | 5       | Difficulty level (1-10) affects temperature rise rate and drill speed sensitivity |
 
 ## Example Usage
 
@@ -146,7 +197,5 @@ RegisterCommand('testhack', function()
     end
 end)
 ```
-
-
 
 Any minigame that wasn't mentioned here does not have configuration and can only be performed one way. You can find how to use them in the [Examples ](../glitch-notifications/examples.md)section
