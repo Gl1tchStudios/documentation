@@ -97,20 +97,22 @@ Parameters:
 Starts the Circuit Breaker hacking minigame.
 
 ```lua
-exports['glitch-minigames']:StartCircuitBreaker(levelNumber, difficultyLevel)
+exports['glitch-minigames']:StartCircuitBreaker(levelNumber, difficultyLevel...)
 ```
 
 Parameters:
 
-| Parameter        | Default | Description                                                       |
-| ---------------- | ------- | ----------------------------------------------------------------- |
-| levelNumber      | 1       | Circuit board layout (1-6)                                        |
-| difficultyLevel  | 0       | Difficulty level (0-3) affects cursor speed and disconnect chance |
-| cursorSpeed      | 0.0085  | Speed of cursor movement (0.0085-0.01)                            |
-| delayStart       | 1000    | Delay before minigame starts (ms)                                 |
-| minDelay         | 2000    | Minimum delay for failure screen (ms)                             |
-| maxDelay         | 4000    | Maximum delay for failure screen (ms)                             |
-| disconnectChance | 0.1     | Chance of random disconnects (0-1)                                |
+| Parameter            | Default              | Description                                                           |
+| -------------------- | -------------------- | --------------------------------------------------------------------- |
+| levelNumber          | random(1, 6)         | Circuit board layout (1-6)                                            |
+| difficultyLevel      | 0 (Beginner)         | Difficulty level (0-3) affects cursor speed and disconnect chance     |
+| delayStart           | 1000                 | Delay before minigame starts (ms)                                     |
+| minFailureDelay      | 5000                 | Minimum delay for failure screen (ms)                                 |
+| maxFailureDelay      | 5000                 | Maximum delay for failure screen (ms)                                 |
+| disconnectChance     | 0 (for Beginner)     | Chance of random disconnects (0-1)                                    |
+| disconnectChanceRate | 10000 (for Beginner) | Decimal between 0 and 1, chance of disconnection (0-0.9)              |
+| minReconnectTime     | 3000                 | Minimum time in milliseconds to reconnect after disconnection (3000+) |
+| maxReconnectTime     | 30000                | Maximum time in milliseconds to reconnect after disconnection         |
 
 ### StartDataCrack
 

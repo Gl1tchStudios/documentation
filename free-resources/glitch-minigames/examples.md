@@ -83,7 +83,7 @@ local success = exports['glitch-minigames']:StartSurgeOverride({'E', 'F'}, 30, 2
 #### 🔌 Circuit Breaker
 
 ```lua
-local success = exports['glitch-minigames']:StartCircuitBreaker(2, 1, 0.009, 1500, 2000, 5000, 0.15)
+local success = exports['glitch-minigames']:StartCircuitBreaker(2, 1, 1000, 5000, 5000, 0 10000, 3000, 30000)
 if success then
     print("Circuit successfully breached!")
 else
