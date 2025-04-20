@@ -113,7 +113,7 @@ end
 #### 🔠 Brute Force
 
 ```lua
-local success = exports['glitch-minigames']:StartHackConnect(5)
+local success = exports['glitch-minigames']:StartBruteForce(5)
 if success then
     print("Password successfully cracked!")
 else
