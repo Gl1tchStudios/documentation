@@ -1,7 +1,5 @@
 # Examples
 
-### 📚 Usage Examples
-
 Below are quick usage examples for each minigame included in **Glitch Minigames**:
 
 ***
@@ -123,6 +121,23 @@ end
 
 ***
 
+### 📚 Usage Examples
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-04-05 190726 (1).png" alt=""><figcaption></figcaption></figure>
+
+#### 🔥 Normal Drilling
+
+```lua
+local success = exports['glitch-minigames']:StartDrilling()
+if success then
+    print("Successfully completed drilling!")
+else
+    print("Drilling failed!")
+end
+```
+
+***
+
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-06 165929.png" alt=""><figcaption></figcaption></figure>
 
 #### 🔢 VAR Hack
@@ -143,7 +158,7 @@ end
 #### 🔥 Plasma Drill
 
 ```lua
-local success = exports['glitch-minigames']:StartPlasmaDrill()
+local success = exports['glitch-minigames']:StartPlasmaDrilling()
 if success then
     print("Successfully completed plasma drilling!")
 else
@@ -151,7 +166,7 @@ else
 end
 
 -- Custom Difficulty
-local success = exports['glitch-minigames']:StartPlasmaDrill(7)
+local success = exports['glitch-minigames']:StartPlasmaDrilling(7)
 if success then
     print("Completed difficult plasma drilling!")
 else

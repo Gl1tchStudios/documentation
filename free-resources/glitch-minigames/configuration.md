@@ -187,11 +187,11 @@ Returns:
 | ---------- | ------- | --------------------------------------------------------------------------------- |
 | difficulty | 5       | Difficulty level (1-10) affects temperature rise rate and drill speed sensitivity |
 
-## Example Usage
+## Testing Usage
 
 ```lua
 RegisterCommand('testhack', function()
-    local success = exports['glitch-minigames']:StartCircuitBreaker(1, 2)
+    local success = exports['glitch-minigames']:WriteHackNameHere()
     if success then
         print("Hack completed successfully!")
     else
