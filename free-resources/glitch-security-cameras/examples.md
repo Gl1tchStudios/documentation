@@ -92,10 +92,12 @@ exports['glitch-securityCameras']:AddCamera(newCamera)
 -- Attempt to hack a specific camera and prop
 local success = exports['glitch-securityCameras']:AttemptCameraHack(1, "security_mainframe", {1})
 if success then
-    -- Execute code after successful hack (e.g., unlock doors)
-    TriggerServerEvent('glitch-casinoHeist:server:setdoor', 8, 0)
+    -- Execute code after successful hack
+    TriggerServerEvent('glitch-casinoHeist:server:test', 8)
 end
 ```
+
+When doing this the Export you entered into HackExport which is done when you defined the camera will be triggered.
 
 #### Parameter Explanation for AttemptCameraHack:
 

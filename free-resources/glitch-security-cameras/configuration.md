@@ -24,13 +24,13 @@ Both of these two options work with each other. `AutoExitEnabled` will enable th
 
 ### `config.Cameras`
 
-The `config.Cameras` array allows you to set up an advanced security camera system in your scripts but you can also define cameras by using exports.&#x20;
+The `config.Cameras` array allows you to set up an advanced security camera system in your scripts.
 
 Each camera configuration includes a unique ID which must be an integer, name, location and hardware features like night vision and thermal modes.&#x20;
 
 You can specify the camera's positional and rotational vectors, as well as rotation limits to restrict its viewing angles. Additionally, each camera can have interactive props associated with it, triggering specific minigame events when interacted with, such as disabling door locks or accessing codes for heists.
 
-The `interactiveProps` field specifies the position, model hash, interaction text, and highlight color, along with parameters for the hack minigame, making this a versatile and customizable setup for simulating sophisticated security operations. But once again you do not have to define an export here that triggers upon interacting you can instead use the [`AttemptCameraHack` ](configuration.md#attemptcamerahack)export.
+The `interactiveProps` field specifies the position, model hash, interaction text, and highlight color, along with parameters for the hack minigame, making this a versatile and customizable setup for simulating sophisticated security operations.&#x20;
 
 ```lua
 config.Cameras = {
@@ -105,6 +105,8 @@ Changes the current view to a different security camera by its ID.&#x20;
 | cameraIndex | nil     | The initial camera the player will see when entering the security cameras |
 
 #### `AttemptCameraHack(cameraIndex, propId, allowedCameras)`
+
+This will trigger the export you set for HackExport when defining the camera and return true or false in most cases but can also return whatever the export is setup to return.
 
 | Parameter      | Default     | Description                                                                                                                            |
 | -------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
