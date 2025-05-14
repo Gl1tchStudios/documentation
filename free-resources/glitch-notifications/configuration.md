@@ -4,6 +4,8 @@
 
 The following exports are available for use in your scripts:
 
+***
+
 #### `ShowNotification`
 
 Displays a notification with a title, message, and optional customizations.
@@ -18,6 +20,8 @@ exports['glitch-notifications']:ShowNotification(title, message, duration, color
   * `duration` (number): Duration in milliseconds (0 for persistent).
   * `color` (string): Hex color code for the title (e.g., `#ff4500`).
   * `noAnimation` (boolean): If `true`, disables animations.
+
+***
 
 #### `AddBoxToNotification`
 
@@ -34,6 +38,8 @@ exports['glitch-notifications']:AddBoxToNotification(notificationId, title, mess
   * `color` (string): Hex color code for the title (optional).
   * `noAnimation` (boolean): If `true`, disables animations.
 
+***
+
 #### `RemoveBoxFromNotification`
 
 Removes a specific text box from a notification.
@@ -46,6 +52,8 @@ exports['glitch-notifications']:RemoveBoxFromNotification(notificationId, boxId)
   * `notificationId` (number): The ID of the notification.
   * `boxId` (number): The ID of the text box to remove.
 
+***
+
 #### `RemoveNotification`
 
 Removes an entire notification, including all its text boxes.
@@ -56,6 +64,8 @@ exports['glitch-notifications']:RemoveNotification(notificationId)
 
 * **Parameters**:
   * `notificationId` (number): The ID of the notification to remove.
+
+***
 
 #### `UpdateBoxContent`
 
@@ -71,6 +81,8 @@ exports['glitch-notifications']:UpdateBoxContent(notificationId, boxId, newMessa
   * `newMessage` (string): The updated text for the box.
   * `newTitle` (string): The updated title for the notification (optional).
   * `newColor` (string): The updated color for the title (optional).
+
+***
 
 #### `ToggleNotification`
 

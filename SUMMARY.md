@@ -4,6 +4,11 @@
 
 ## Free Resources
 
+* [💖 Glitch Lib](free-resources/glitch-lib/README.md)
+  * [Installation](free-resources/glitch-lib/installation.md)
+  * [Client](free-resources/glitch-lib/client.md)
+  * [Server](free-resources/glitch-lib/server.md)
+  * [Examples](free-resources/glitch-lib/examples.md)
 * [🔔 Glitch Notifications](free-resources/glitch-notifications/README.md)
   * [Installation](free-resources/glitch-notifications/installation.md)
   * [Configuration](free-resources/glitch-notifications/configuration.md)

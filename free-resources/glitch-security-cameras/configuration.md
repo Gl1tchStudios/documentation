@@ -58,6 +58,7 @@ config.Cameras = {
                 successText = "Security system bypassed",           -- Text displayed on success
                 failText = "Security alert triggered",              -- Text displayed on failure
                 highlightColor = {r = 0, g = 255, b = 0, a = 200},  -- Color of the highlight
+                exitOnHack = true,                                  -- Setting this to False will keep the player in the camera after doing a hack
                 
                 hackExport = "glitch-minigames:StartSurgeOverride", -- Export to call for hack minigame
                 hackParams = {                                      -- Parameters for the hack minigame

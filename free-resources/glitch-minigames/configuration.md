@@ -8,6 +8,8 @@ Enable debug commands for testing purposes. Set to false for production.
 `config.usingGlitchNotification (boolean):`\
 Enable Glitch notification system integration.
 
+***
+
 ## ⬆️ Exports
 
 The following exports are available for use in your scripts:
@@ -32,6 +34,8 @@ Parameters:
 | safeZoneMaxWidth     | 120     | Starting width of the safe zone (in pixels)                |
 | safeZoneShrinkAmount | 10      | How much the safe zone shrinks after each successful hack  |
 
+***
+
 ### StartBackdoorSequence
 
 Starts the Backdoor Sequence hacking minigame.
@@ -52,6 +56,8 @@ Parameters:
 | maxSimultaneousKeys | 3                             | Maximum number of keys shown at once for each stage            |
 | customKeys          | W,A,S,D,arrows,0-9            | Array of keys to use in sequences (e.g., {'W','A','S','D'})    |
 | keyHintText         | "W, A, S, D, ←, →, ↑, ↓, 0-9" | Text displayed to hint available keys                          |
+
+***
 
 ### StartCircuitRhythm
 
@@ -74,6 +80,8 @@ Parameters:
 | maxWrongKeys   | 5                  | Maximum wrong key presses allowed before failure                       |
 | maxMissedNotes | 3                  | Maximum notes that can be missed before failure                        |
 
+***
+
 ### StartSurgeOverride
 
 Starts the Surge Override hacking minigame.
@@ -91,6 +99,8 @@ Parameters:
 | decayRate       | 2                            | How quickly the progress bar depletes when not pressing keys (higher = faster) |
 | multiKeyMode    | false                        | Enable multiple simultaneous key press mode                                    |
 | keyCombinations | \[\['E','F'],\['SPACE','B']] | Array of key combinations for multi-key mode                                   |
+
+***
 
 ### StartCircuitBreaker
 
@@ -114,6 +124,8 @@ Parameters:
 | minReconnectTime     | 3000                 | Minimum time in milliseconds to reconnect after disconnection (3000+) |
 | maxReconnectTime     | 30000                | Maximum time in milliseconds to reconnect after disconnection         |
 
+***
+
 ### StartDataCrack
 
 Starts the Data Crack hacking minigame.
@@ -128,6 +140,8 @@ Parameters:
 | ---------- | ------- | --------------------------------------------- |
 | difficulty | 3       | Difficulty level (1-5) affects movement speed |
 
+***
+
 ### StartBruteForce
 
 Starts the Brute Force hacking minigame.
@@ -141,6 +155,8 @@ Returns:
 | Parameter | Default | Description                                      |
 | --------- | ------- | ------------------------------------------------ |
 | numLives  | 5       | Number of attempts allowed before failure (1-10) |
+
+***
 
 ### StartDrilling
 
@@ -159,6 +175,8 @@ Returns:
 | timeLimit          | 60      | Time limit in seconds (0 for no limit)                                         |
 | drillBitDurability | 100     | Starting durability of drill bit (0-100)                                       |
 
+***
+
 ### StartVarHack
 
 Starts the VAR System hack minigame.
@@ -173,6 +191,8 @@ Parameters:
 | ------ | - | ------------------------------------------------- |
 | speed  | 5 | Time limit in seconds for completing the sequence |
 
+***
+
 ### StartPlasmaDrilling
 
 Starts the Plasma Drilling minigame.
@@ -186,6 +206,8 @@ Returns:
 | Parameter  | Default | Description                                                                       |
 | ---------- | ------- | --------------------------------------------------------------------------------- |
 | difficulty | 5       | Difficulty level (1-10) affects temperature rise rate and drill speed sensitivity |
+
+***
 
 ## Testing Usage
 
