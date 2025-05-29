@@ -10,11 +10,8 @@ description: >-
 
 **Transform your FiveM server with a fully immersive electrical repair experience**
 
-### 🎬 Media
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail electricaljob (1).png" alt=""><figcaption></figcaption></figure>
 
-*
-
-    <figure><img src="../../.gitbook/assets/glitchstudiosthumbnail electricaljob (1).png" alt=""><figcaption></figcaption></figure>
 * **Video Showcase:** [YouTube Demo](https://youtu.be/3O2KEaBLE3Q) _(Note: Video content may reflect earlier version)_
 * **Source Code:** [GitHub Repository](https://github.com/Gl1tchStudios/glitch-electricalJob)
 
