@@ -6,9 +6,9 @@ description: >-
 hidden: true
 ---
 
-# 💖 Glitch Lib
+# 💖 Glitch Abstraction
 
-## Glitch Lib [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+## Glitch Abstraction [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 <figure><img src="../../.gitbook/assets/glitchstudiosthumbnail lib.png" alt=""><figcaption><p>TEMP THUMBNAIL NOT FINAL</p></figcaption></figure>
 

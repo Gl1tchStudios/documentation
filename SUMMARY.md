@@ -4,11 +4,11 @@
 
 ## Free Resources
 
-* [💖 Glitch Lib](free-resources/glitch-lib/README.md)
-  * [Installation](free-resources/glitch-lib/installation.md)
-  * [Client](free-resources/glitch-lib/client.md)
-  * [Server](free-resources/glitch-lib/server.md)
-  * [Examples](free-resources/glitch-lib/examples.md)
+* [💖 Glitch Abstraction](free-resources/glitch-abstraction/README.md)
+  * [Installation](free-resources/glitch-abstraction/installation.md)
+  * [Client](free-resources/glitch-abstraction/client.md)
+  * [Server](free-resources/glitch-abstraction/server.md)
+  * [Examples](free-resources/glitch-abstraction/examples.md)
 * [🔔 Glitch Notifications](free-resources/glitch-notifications/README.md)
   * [Installation](free-resources/glitch-notifications/installation.md)
   * [Configuration](free-resources/glitch-notifications/configuration.md)
@@ -25,3 +25,9 @@
 ## Paid Resources
 
 * [Coming Soon](paid-resources/coming-soon.md)
+* [⚡ Glitch Electrical Job](paid-resources/glitch-electrical-job/README.md)
+  * [Installation](paid-resources/glitch-electrical-job/installation.md)
+  * [Configuration](paid-resources/glitch-electrical-job/configuration.md)
+* [🃏 Glitch Casino Heist](paid-resources/glitch-casino-heist/README.md)
+  * [Installation](paid-resources/glitch-casino-heist/installation.md)
+  * [Configuration](paid-resources/glitch-casino-heist/configuration.md)
