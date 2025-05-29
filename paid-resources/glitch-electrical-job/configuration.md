@@ -1,146 +1,298 @@
 # Configuration
 
-## ⚙️ Config
+## 🔧 Configuration Guide
 
-The following configuration options are available in shared/config.lua:
+The electrical job script offers extensive customization options through two main configuration files. This guide will walk you through each configuration option to help you set up the perfect electrical job experience for your server.
 
-***
+### 📁 Configuration Files
 
-### `config.TestingMode (boolean):`&#xD;
+The configuration is split across two main files:
 
-Enable debug commands for testing purposes. Set to false for production.
+* **`config-main.lua`** - Core gameplay settings, payouts, and mechanics
+* **`config-locations.lua`** - Location data for all mission types
 
-<figure><img src="../../.gitbook/assets/218_20250512224411_1.png" alt=""><figcaption></figcaption></figure>
+### ⚙️ Main Configuration (`config-main.lua`)
 
-Using `TestingMode` can help you find values you will need for setting the `rotationLimits`  e.g. You can see the current Heading you are looking at in the top right and the Height.&#x20;
-
-***
-
-### `config.AutoExitEnabled` and `config.AutoExitTime = 300`&#x20;
-
-Both of these two options work with each other. `AutoExitEnabled` will enable the feature to kick the player out of the security cameras after a select amount of second which is defined by `AutoExitTime` .&#x20;
-
-***
-
-### `config.Cameras`
-
-The `config.Cameras` array allows you to set up an advanced security camera system in your scripts.
-
-Each camera configuration includes a unique ID which must be an integer, name, location and hardware features like night vision and thermal modes.&#x20;
-
-You can specify the camera's positional and rotational vectors, as well as rotation limits to restrict its viewing angles. Additionally, each camera can have interactive props associated with it, triggering specific minigame events when interacted with, such as disabling door locks or accessing codes for heists.
-
-The `interactiveProps` field specifies the position, model hash, interaction text, and highlight color, along with parameters for the hack minigame, making this a versatile and customizable setup for simulating sophisticated security operations.&#x20;
+#### Basic Settings
 
 ```lua
-config.Cameras = {
-    {
-        id = 1,                                                     -- Unique ID for the camera
-        name = "Security Entrance",                                 -- Camera name
-        location = "Diamond Casino & Resort",                       -- Location of the camera
-        modes = { -- both set to true by default
-            nightVision = true,
-            thermal = true
-        },
-        position = vector3(2519.4429, -252.3573, -53.3036),         -- Camera position
-        rotation = vector3(-10.0, 0.0, 25.0),                       -- Camera rotation
-        rotationLimits = {
-            x = {min = -75.0, max = -5},                            -- Vertical limits
-            z = {min = 89, max = 175.0}                             -- Horizontal limits
-        },
-        interactiveProps = {
-            -- Example using an export for the minigame
-            {
-                propUniqueId = "security_mainframe",                -- Unique ID for the prop
-                position = vector3(2509.0986, -260.3841, -54.0064), -- Prop position
-                hash = -1498975473,                                 -- Hash of the prop model
-                interactionText = "Disable the Door Locks",         -- Text displayed when interacting with the prop
-                successText = "Security system bypassed",           -- Text displayed on success
-                failText = "Security alert triggered",              -- Text displayed on failure
-                highlightColor = {r = 0, g = 255, b = 0, a = 200},  -- Color of the highlight
-                exitOnHack = true,                                  -- Setting this to False will keep the player in the camera after doing a hack
-                
-                hackExport = "glitch-minigames:StartSurgeOverride", -- Export to call for hack minigame
-                hackParams = {                                      -- Parameters for the hack minigame
-                    keys = {'E', 'F'},
-                    requiredPresses = 30,
-                    decayRate = 2
-                },
-            }
-        }
+config.Car = "speedo"           -- Vehicle model for electrical work
+config.Plate = "ELE "          -- License plate prefix for work vehicles
+config.Debug = true            -- Enable/disable debug mode for testing
+```
+
+#### User Interface Options
+
+```lua
+config.UI = "GTAUI"                    -- UI type: "Notification" or "GTAUI"
+config.HesitCompleteUI = false         -- Show heist completion UI
+config.DrawTextAtLocations = true      -- Show interaction text at mission locations
+```
+
+#### Experience System Integration
+
+```lua
+config.usingPickleXP = true     -- Enable PickleXP system integration
+config.hardsetLevelXP = 10      -- Manual level override (if not using PickleXP)
+```
+
+### 🎮 Minigame Configuration
+
+The script supports multiple minigame types for different mission categories:
+
+```lua
+config.hacks = {
+    bank = {
+        { type = 'circuitBreaker'}  -- Requires glitch-minigames
     },
+    store = {
+        { type = 'buttonMash'}      -- Requires glitch-minigames
+    },
+    house = {
+        { type = 'skillBar'}        -- Requires SN-Hacking
+    },
+    mlo = {
+        { type = 'circuitBreaker'},
+        { type = 'buttonMash'},
+        { type = 'skillBar'}
+    }
 }
 ```
 
-***
+#### Supported Minigame Types
 
-## ⬆️ Exports
+| Type             | Required Resource | Description              |
+| ---------------- | ----------------- | ------------------------ |
+| `circuitBreaker` | glitch-minigames  | Circuit breaker puzzle   |
+| `buttonMash`     | glitch-minigames  | Button mashing challenge |
+| `skillBar`       | SN-Hacking        | Skill bar timing game    |
 
-The following exports are available for use in your scripts:
+#### Failure Penalties
 
-### Camera Control Exports
+```lua
+config.failureReductAmount = math.random(500, 800)  -- Money deducted on minigame failure
+config.hackFailureThreshold = 0                     -- Failure threshold percentage
+```
 
-#### `EnterCameraMode(cameraIndex, allowed)`
+### 💰 Payment & Bonus System
 
-Switches the player's view to a security camera, enabling camera mode and associated UI elements.
+#### Time-Based Bonuses
 
-| Parameter      | Default     | Description                                                                                           |
-| -------------- | ----------- | ----------------------------------------------------------------------------------------------------- |
-| cameraIndex    | nil         | The initial camera the player will see when entering the security cameras                             |
-| allowedCameras | All Cameras | A table containing the ids of the cameras you want the player to be able to access. e.g. `{1,2,4,5,}` |
+```lua
+config.bonusEnabled = true      -- Enable time completion bonuses
+config.bonusRatio = 1.5        -- Bonus multiplier (1.5x base pay)
 
-#### `ExitCameraMode()`
+config.missionBaseTime = {     -- Time limits for bonus eligibility (seconds)
+    bank = 60 * 4,            -- 4 minutes
+    store = 60 * 4,
+    house = 60 * 4,
+    atm = 60 * 4,
+    lightpoles = 60 * 4,
+    mlo = 60 * 4
+}
+```
 
-Returns the player's view to normal and disables camera mode, removing associated UI elements.
+#### Level-Based Pay Scaling
 
-* This is handled automatically by the script but can also be used manually
+The payment system scales with player level, offering higher rewards and faster completion times as players progress:
 
-#### `SwitchCamera(cameraIndex)`
+```lua
+config.payLevels = {
+    {
+        minLevel = 0, maxLevel = 10,
+        lightpoleRepairPay = {1000, 1250},
+        atmMissionPay = {1000, 1250},
+        bankMissionPay = {4200, 4900},
+        houseMissionPay = {4200, 4900},
+        storeMissionPay = {4200, 4900},
+        mloMissionPay = {4300, 5000},
+        TimeToFix = {8000, 11000}
+    },
+    -- Additional level ranges up to 50+
+}
+```
 
-Changes the current view to a different security camera by its ID.&#x20;
+#### Payment Breakdown by Level
 
-* This is handled automatically by the script but can also be used manually
+| Level Range | Light Pole    | ATM           | Bank/House/Store | MLO           | Repair Time (ms) |
+| ----------- | ------------- | ------------- | ---------------- | ------------- | ---------------- |
+| 0-10        | $1,000-$1,250 | $1,000-$1,250 | $4,200-$4,900    | $4,300-$5,000 | 8-11 seconds     |
+| 10-20       | $1,250-$1,400 | $1,250-$1,400 | $4,900-$5,600    | $5,000-$5,700 | 7-9 seconds      |
+| 20-30       | $1,400-$1,600 | $1,400-$1,600 | $5,600-$6,000    | $5,700-$6,100 | 6-8 seconds      |
+| 30-40       | $1,600-$1,900 | $1,600-$1,900 | $6,000-$6,700    | $6,100-$6,800 | 5-7 seconds      |
+| 40-50       | $1,900-$2,100 | $1,900-$2,100 | $6,700-$8,700    | $6,800-$8,800 | 4-6 seconds      |
+| 50+         | $2,600        | $2,600        | $9,700           | $9,800        | 3-5 seconds      |
 
-| Parameter   | Default | Description                                                               |
-| ----------- | ------- | ------------------------------------------------------------------------- |
-| cameraIndex | nil     | The initial camera the player will see when entering the security cameras |
+### 🎁 Special Events & Items
 
-#### `AttemptCameraHack(cameraIndex, propId, allowedCameras)`
+#### Special Events
 
-This will trigger the export you set for HackExport when defining the camera and return true or false in most cases but can also return whatever the export is setup to return.
+```lua
+config.specialEvents = true           -- Enable special event missions
+config.specialEventPercentage = 15    -- 15% chance for special events
+config.specialEventBonus = 50000     -- Extra $50,000 for special events
+```
 
-| Parameter      | Default     | Description                                                                                                                            |
-| -------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| cameraIndex    | nil         | The initial camera the player will see when entering the security cameras                                                              |
-| propId         | nil         | The prop which the player will be able to hack. This should be the string which is in `propUniqueId` from when you created the camera. |
-| allowedCameras | All Cameras | A table containing the ids of the cameras you want the player to be able to access. e.g. `{1,2,4,5,}`                                  |
+#### Risk & Reward
 
-***
+```lua
+config.chanceToBeRobbed = true            -- Enable robbery encounters
+config.chanceToBeRobbedPercentage = 5     -- 5% chance of being robbed
+```
 
-### Camera Management Exports
+#### Bonus Items
 
-#### `AddCamera(cameraData)`
+```lua
+config.bonusItems = true          -- Enable bonus item rewards
+config.bonusItemChance = 35       -- 35% chance to receive bonus items
 
-Adds a new camera to the security system with specified parameters. CameraData would be like [this](configuration.md#config.cameras)
+config.items = {
+    {item = "copper", minLevel = 0},
+    {item = "e_scrap", minLevel = 0},
+    {item = "rubber", minLevel = 0},
+    {item = "atmmotherboard", minLevel = 40}  -- High-level exclusive item
+}
+```
 
-#### `RemoveCamera(cameraId)`
+#### Item Reward Scaling
 
-Removes a camera from the security system by its ID.
+```lua
+config.levelRewards = {
+    {minLevel = 0, maxLevel = 10, minAmount = 1, maxAmount = 2},
+    {minLevel = 10, maxLevel = 20, minAmount = 1, maxAmount = 3},
+    {minLevel = 20, maxLevel = 30, minAmount = 2, maxAmount = 4},
+    {minLevel = 30, maxLevel = 40, minAmount = 3, maxLevel = 4},
+    {minLevel = 40, maxLevel = 50, minAmount = 4, maxAmount = 5},
+    {minLevel = 50, maxLevel = math.huge, minAmount = 5, maxAmount = 5}
+}
+```
 
-#### `GetAllCameras()`
+### 🏢 Location Configuration (`config-locations.lua`)
 
-Returns a list of all cameras in the security system.
+#### MLO Compatibility
 
-#### `GetCameraById(cameraId)`
+```lua
+config.usingGabzBanks = false    -- Enable Gabz Bank MLO support
+config.usingGabzStores = false   -- Enable Gabz Store MLO support
+```
 
-Retrieves a specific camera's data by its ID.
+#### Mission Location Types
 
-***
+The script supports various location types for different mission categories:
 
-## How to set up camera rotationLimits?
+**Street Light Repair Posts**
 
-To setup the camera rotation limits we must first recognize that the x values are -180 to 180 and the z values are 360 degrees. Knowing this we have then included a built-in debug mode which can be toggled on by setting [Config.TestingMode](configuration.md#config.testingmode-boolean) to true. Doing this and then going into a camera will display the current heading and height of where the camera is looking.
+```lua
+config.Posts = {
+    {
+        prop = 'prop_streetlight_01',
+        scenario = 'PROP_HUMAN_SEAT_BENCH',
+        verticalOffset = -0.5,
+        forwardOffset = 0.0,
+        leftOffset = 0.0,
+        angularOffset = 180.0
+    }
+    -- Additional light pole configurations
+}
+```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+**ATM Locations**
 
-By using this information, we can look at where we want the camera rotation limits to be. We then enter the heading/height into rotationLimits and thus lock the cameras view into a certain area. You must set the rotation of the camera to be looking at a position which is within the two degrees you want the camera to move between e.g. `rotation = vector3(-10.0, 0.0, playerHeading), -- Camera rotation` So here you would set playerHeading to be your characters heading when looking in the direction you want the camera to be looking initially. Once again, this **MUST** between the two degrees you have set for the boundary.
+Pre-configured ATM coordinates across the map:
+
+```lua
+config.atmProps = {
+    vector3(-1205.9755, -324.9689, 37.8596),
+    vector3(-1205.1788, -326.5736, 37.8574),
+    -- 25+ additional ATM locations
+}
+```
+
+**Bank Missions**
+
+Bank locations with different coordinates for default GTA and Gabz MLO interiors:
+
+```lua
+config.bankData = {
+    {
+        title = "Legion",
+        location = vector3(151.4436, -1035.0088, 29.3396),
+        locationOne = vector3(145.7424, -1044.1407, 29.3778),
+        locationTwo = vector3(146.8694, -1046.0580, 29.3681)
+    }
+    -- 6 total bank locations
+}
+```
+
+**Store Missions**
+
+Store locations with Gabz MLO support:
+
+```lua
+config.storeData = {
+    {
+        title = "Mirror Park",
+        location = vector3(1159.6, -328.1, 69.0),
+        locationOne = vector3(1159.8577, -315.1490, 69.2050),
+        locationTwo = vector3(1161.9144, -314.3739, 71.3255)
+    }
+    -- 8 total store locations
+}
+```
+
+**House Missions**
+
+Residential electrical work locations:
+
+```lua
+config.houseData = {
+    {
+        title = "House 1",
+        location = vector3(-351.3857, 475.7126, 112.8314),
+        locationOne = vector3(-381.8230, 462.9610, 113.5191),
+        locationTwo = vector3(-370.2748, 464.2496, 113.1691)
+    }
+    -- 21 total house locations
+}
+```
+
+**MLO Interior Missions**
+
+Complex interior locations including:
+
+* **FIB HQ** - High-security government building
+* **Luxury Apartments** - High-end residential properties
+* **Business Centers** - Corporate office buildings
+* **Nightclubs** - Entertainment venues
+* **Vehicle Warehouses** - Commercial properties
+* **Casino Penthouses** - Premium locations
+* And More!
+
+```lua
+config.mloData = {
+    {
+        title = "FIB HQ",
+        location = vector3(141.1393, -765.5107, 45.7520),
+        locationTwo = vector3(138.1929, -764.6608, 242.1456),
+        mloOne = vector3(119.5360, -724.8893, 242.9142),
+        mloTwo = vector3(125.0617, -726.8911, 242.1496)
+    }
+    -- 30+ total MLO locations
+}
+```
+
+#### Special Event Locations
+
+```lua
+config.mloSpecialEvent = {vector3(149.9800, -759.8262, 242.1518)}
+config.mloSpecialEventTwo = {vector3(-64.3865, -2522.1533, 6.0100)}
+config.mloSpecialEventThree = {vector3(-57.1349, -2520.8381, 7.4012)}
+```
+
+### 🔧 Level Lock for MLO Jobs
+
+#### Level Restrictions
+
+```lua
+config.levelLock = 10  -- Minimum level required to access electrical jobs
+```

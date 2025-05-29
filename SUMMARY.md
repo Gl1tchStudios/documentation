@@ -24,7 +24,6 @@
 
 ## Paid Resources
 
-* [Coming Soon](paid-resources/coming-soon.md)
 * [⚡ Glitch Electrical Job](paid-resources/glitch-electrical-job/README.md)
   * [Installation](paid-resources/glitch-electrical-job/installation.md)
   * [Configuration](paid-resources/glitch-electrical-job/configuration.md)
