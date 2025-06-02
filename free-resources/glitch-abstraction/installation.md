@@ -3,11 +3,15 @@
 ### Setup Instructions
 
 1. **Clone the repository** to your local machine.
-2. **Place the `glitch-lib`folder** into your FiveM resources directory.
+2. **Place the `glitch-abstraction`folder** into your FiveM resources directory.
 3.  **Add the resource** to your `server.cfg`:&#x20;
 
     ```
-    start glitch-lib
+    start glitch-abstraction
     ```
-4. **Ensure you have the necessary permissions** to run the script on your server.
+4.  **Reference the library in your scripts:**
+
+    ```lua
+    local GlitchAbst = exports['glitch-abstraction']:getAbstraction()
+    ```
 

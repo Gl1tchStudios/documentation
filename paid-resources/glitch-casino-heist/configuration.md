@@ -1,146 +1,270 @@
 # Configuration
 
-## ⚙️ Config
+## ⚙️ Configuration
 
-The following configuration options are available in shared/config.lua:
+The Casino Heist resource offers extensive customization options through the `config.lua` file. This guide covers all available configuration options to help you set up the perfect heist experience.
 
-***
+### 🎮 Minigame Dependencies
 
-### `config.TestingMode (boolean):`&#xD;
+Before configuring the heist, ensure you have the required minigame dependencies installed based on your chosen hack types:
 
-Enable debug commands for testing purposes. Set to false for production.
+#### SN-Hacking Series
 
-<figure><img src="../../.gitbook/assets/218_20250512224411_1.png" alt=""><figcaption></figcaption></figure>
+* `SN-MemoryGame`
+* `SN-NumberUp`
+* `SN-SkillCheck`
+* `SN-Thermite`
+* `SN-SkillBar`
+* `SN-KeyPad`
+* `SN-ColorPicker`
+* `SN-MemoryCards`
 
-Using `TestingMode` can help you find values you will need for setting the `rotationLimits`  e.g. You can see the current Heading you are looking at in the top right and the Height.&#x20;
+#### Glow Minigames
 
-***
+* `glow-Path`
+* `glow-Spot`
+* `glow-Math`
 
-### `config.AutoExitEnabled` and `config.AutoExitTime = 300`&#x20;
+#### Pure Minigames
 
-Both of these two options work with each other. `AutoExitEnabled` will enable the feature to kick the player out of the security cameras after a select amount of second which is defined by `AutoExitTime` .&#x20;
+* `pure-NumberCounter`
 
-***
+#### BD Minigames
 
-### `config.Cameras`
+* `bd-PinCracker`
+* `bd-Chopping`
+* `bd-RoofRunning`
+* `bd-Thermite`
+* `bd-Terminal`
 
-The `config.Cameras` array allows you to set up an advanced security camera system in your scripts.
+#### BOII Minigames
 
-Each camera configuration includes a unique ID which must be an integer, name, location and hardware features like night vision and thermal modes.&#x20;
+* `boii-ButtonMash`
+* `boii-Anagram`
+* `boii-ChipHack`
+* `boii-Hangman`
+* `boii-KeyDrop`
+* `boii-Pincode`
+* `boii-SafeCrack`
+* `boii-SkillBar`
+* `boii-SkillCircle`
+* `boii-Wirecut`
 
-You can specify the camera's positional and rotational vectors, as well as rotation limits to restrict its viewing angles. Additionally, each camera can have interactive props associated with it, triggering specific minigame events when interacted with, such as disabling door locks or accessing codes for heists.
+#### OX Lib
 
-The `interactiveProps` field specifies the position, model hash, interaction text, and highlight color, along with parameters for the hack minigame, making this a versatile and customizable setup for simulating sophisticated security operations.&#x20;
+* `ox-SkillCircle`
+* `glitch-keypad` (Requires ox\_lib)
+
+
+
+Glitch Minigames
+
+* Every Minigame that Glitch Minigames has
+
+### 🔧 Basic Configuration
+
+#### Testing & Debug
 
 ```lua
-config.Cameras = {
-    {
-        id = 1,                                                     -- Unique ID for the camera
-        name = "Security Entrance",                                 -- Camera name
-        location = "Diamond Casino & Resort",                       -- Location of the camera
-        modes = { -- both set to true by default
-            nightVision = true,
-            thermal = true
-        },
-        position = vector3(2519.4429, -252.3573, -53.3036),         -- Camera position
-        rotation = vector3(-10.0, 0.0, 25.0),                       -- Camera rotation
-        rotationLimits = {
-            x = {min = -75.0, max = -5},                            -- Vertical limits
-            z = {min = 89, max = 175.0}                             -- Horizontal limits
-        },
-        interactiveProps = {
-            -- Example using an export for the minigame
-            {
-                propUniqueId = "security_mainframe",                -- Unique ID for the prop
-                position = vector3(2509.0986, -260.3841, -54.0064), -- Prop position
-                hash = -1498975473,                                 -- Hash of the prop model
-                interactionText = "Disable the Door Locks",         -- Text displayed when interacting with the prop
-                successText = "Security system bypassed",           -- Text displayed on success
-                failText = "Security alert triggered",              -- Text displayed on failure
-                highlightColor = {r = 0, g = 255, b = 0, a = 200},  -- Color of the highlight
-                exitOnHack = true,                                  -- Setting this to False will keep the player in the camera after doing a hack
-                
-                hackExport = "glitch-minigames:StartSurgeOverride", -- Export to call for hack minigame
-                hackParams = {                                      -- Parameters for the hack minigame
-                    keys = {'E', 'F'},
-                    requiredPresses = 30,
-                    decayRate = 2
-                },
-            }
-        }
-    },
+config.TestingMode = false
+```
+
+Set to `true` to enable debug messages and testing features. Set to `false` for production use.
+
+#### Notification System
+
+```lua
+config.Notifications = "ox"
+```
+
+Supported options: `"ox"` or `"glitch"`
+
+#### Hints System
+
+```lua
+config.Hints = true
+```
+
+Set to `false` to disable heist hints (feature not complete).
+
+### ⏰ Timing Configuration
+
+#### Power Station Settings
+
+```lua
+config.BlackoutTime = 10 -- Time in minutes for power station to be offline
+config.TimeToRepairCasino = 4 -- Time in minutes to repair casino power
+```
+
+#### Vault Looting Timer
+
+```lua
+config.timeLimitOnLootingVault = true -- Enable/disable vault time limit
+config.timeToLootVault = 60 * 4 -- Time in seconds (240 seconds = 4 minutes)
+```
+
+### 🚪 Entry & Exit Locations
+
+#### Casino Entry Points
+
+The heist supports multiple entry methods with specific spawn locations:
+
+```lua
+config.CasinoEnterLocations = {
+    main = {1000.9869, 52.8287, 75.0596, 237.4639},
+    partyroof = {960.1717, 43.1645, 71.6945, 103.9184},
+    roof = {971.9659, 52.1280, 120.2407, 149.8707},
+    sewer = {993.2103, -140.8808, 34.7420, 321.7434},
+    penthouse = {2514.3110, -231.3394, -39.1229, 0.2265},
 }
 ```
 
-***
+#### Teleport Destinations
 
-## ⬆️ Exports
+Corresponding interior locations for each entry method:
 
-The following exports are available for use in your scripts:
+```lua
+config.CasinoTeleportLocations = {
+    main = {2501.8677, -237.3059, -55.1232, 272.6512},
+    partyroof = {965.0214, 58.5690, 112.5531, 61.5764},
+    roof = {2521.8577, -264.7307, -24.1149, 4.7998},
+    sewer = {2516.6213, -327.1884, -70.6539, 93.5412},
+    penthouse = {969.4594, 63.1847, 112.5549, 237.0931},
+}
+```
 
-### Camera Control Exports
+### 🔓 Hack Configuration
 
-#### `EnterCameraMode(cameraIndex, allowed)`
+Configure different minigames for each heist phase:
 
-Switches the player's view to a security camera, enabling camera mode and associated UI elements.
+```lua
+config.Hacks = {
+    mainEntrance = {"glow-Spot", "glow-Spot", "glow-Spot"},
+    roofEntrance = {"boii-SkillBar", "boii-SkillBar"},
+    sewerEntrance = {"ox-SkillCircle", "ox-SkillCircle"},
+    vault = {"boii-ButtonMash", "boii-ButtonMash"},
+    security = {"SN-SkillBar", "SN-SkillBar"}
+}
+```
 
-| Parameter      | Default     | Description                                                                                           |
-| -------------- | ----------- | ----------------------------------------------------------------------------------------------------- |
-| cameraIndex    | nil         | The initial camera the player will see when entering the security cameras                             |
-| allowedCameras | All Cameras | A table containing the ids of the cameras you want the player to be able to access. e.g. `{1,2,4,5,}` |
+Each array represents the sequence of minigames players must complete for that entry method or objective.
 
-#### `ExitCameraMode()`
+### 💰 Loot Configuration
 
-Returns the player's view to normal and disables camera mode, removing associated UI elements.
+#### Loot Items
 
-* This is handled automatically by the script but can also be used manually
+Define the rewards players can obtain:
 
-#### `SwitchCamera(cameraIndex)`
+```lua
+config.LootItems = {
+    money = {itemName = "money", count = math.random(1, 5)},
+    gold = {itemName = "gold", count = math.random(1, 5)},
+    diamonds = {itemName = "diamonds", count = math.random(1, 5)},
+    artwork = {itemName = "bread", count = 1}, -- Example placeholder
+}
+```
 
-Changes the current view to a different security camera by its ID.&#x20;
+#### Required Items
 
-* This is handled automatically by the script but can also be used manually
+Items needed for different hack phases:
 
-| Parameter   | Default | Description                                                               |
-| ----------- | ------- | ------------------------------------------------------------------------- |
-| cameraIndex | nil     | The initial camera the player will see when entering the security cameras |
+```lua
+config.HackItems = {
+    electricalTamper = "pliers",
+    explosive = "thermal_charge",
+    hackItemOne = "xtrojan",
+    hackItemTwo = "xphone",
+    hackItemThree = "xlaptop",
+    hackItemFour = "flapperhero",
+    hackItemFive = "decrypto",
+    hackItemSix = "laptop_h",
+    drillItem = "pliers",
+    rappelEquipment = "rappel_equipment",
+    penthouse = "casino_penthouse_key",
+    vaultOne = "casino_vault_key_one",
+    vaultTwo = "casino_vault_key_two",
+    usbDevice = "casino_usbdevice",
+    teargas = "weapon_teargas",
+    bonusItemOne = "water", -- Bonus vault item
+    bonusItemTwo = "water" -- Bonus vault item
+}
+```
 
-#### `AttemptCameraHack(cameraIndex, propId, allowedCameras)`
+### 💨 Tear Gas System
 
-This will trigger the export you set for HackExport when defining the camera and return true or false in most cases but can also return whatever the export is setup to return.
+#### Affected Zone
 
-| Parameter      | Default     | Description                                                                                                                            |
-| -------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| cameraIndex    | nil         | The initial camera the player will see when entering the security cameras                                                              |
-| propId         | nil         | The prop which the player will be able to hack. This should be the string which is in `propUniqueId` from when you created the camera. |
-| allowedCameras | All Cameras | A table containing the ids of the cameras you want the player to be able to access. e.g. `{1,2,4,5,}`                                  |
+Define the polygon area where tear gas affects players:
 
-***
+```lua
+config.TearGasZonePoints = {
+    vector3(2504.59, -233.50, -69.58),
+    vector3(2504.76, -199.32, -69.58),
+    vector3(2561.41, -247.36, -69.58),
+    vector3(2516.50, -268.54, -69.58),
+    vector3(2501.22, -262.36, -69.58),
+    vector3(2500.62, -248.32, -69.58),
+    vector3(2504.73, -243.58, -69.58)
+}
+```
 
-### Camera Management Exports
+#### Gas Spawn Locations
 
-#### `AddCamera(cameraData)`
+Specific coordinates where tear gas effects are created:
 
-Adds a new camera to the security system with specified parameters. CameraData would be like [this](configuration.md#config.cameras)
+```lua
+config.TearGasLocations = {
+    {coords = vector3(2511.6406, -238.5636, -70.7372), radius = 5.0},
+    {coords = vector3(2528.7166, -238.5137, -70.7372), radius = 8.0},
+    -- Additional locations...
+}
+```
 
-#### `RemoveCamera(cameraId)`
+Each location includes coordinates and an effect radius.
 
-Removes a camera from the security system by its ID.
+### 👮 Security Guards
 
-#### `GetAllCameras()`
+#### Penthouse Guard Positions
 
-Returns a list of all cameras in the security system.
+Configure guard spawn locations and headings:
 
-#### `GetCameraById(cameraId)`
+```lua
+config.PenthouseGuardLocations = {
+    {coords = vector3(971.3420, 49.3578, 116.1642), heading = 309.9797},
+    {coords = vector3(969.3802, 41.2354, 116.1642), heading = 46.9673},
+    -- Additional guard positions...
+}
+```
 
-Retrieves a specific camera's data by its ID.
+Guards are divided into left side and right side formations for tactical placement.
 
-***
+### 🎯 Interactive Props
 
-## How to set up camera rotationLimits?
+The heist features an extensive prop system for interactive elements like keycards, cash stacks, and hackable devices. Each prop includes:
 
-To setup the camera rotation limits we must first recognize that the x values are -180 to 180 and the z values are 360 degrees. Knowing this we have then included a built-in debug mode which can be toggled on by setting [Config.TestingMode](configuration.md#config.testingmode-boolean) to true. Doing this and then going into a camera will display the current heading and height of where the camera is looking.
+* **Model**: 3D model hash or name
+* **Location Type**: `"fixed"` or `"random"`
+* **Interaction**: Custom functions, events, or server callbacks
+* **Conditions**: Requirements for interaction availability
+* **Zones**: Interaction areas and sizes
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+#### Key Prop Categories
 
-By using this information, we can look at where we want the camera rotation limits to be. We then enter the heading/height into rotationLimits and thus lock the cameras view into a certain area. You must set the rotation of the camera to be looking at a position which is within the two degrees you want the camera to move between e.g. `rotation = vector3(-10.0, 0.0, playerHeading), -- Camera rotation` So here you would set playerHeading to be your characters heading when looking in the direction you want the camera to be looking initially. Once again, this **MUST** between the two degrees you have set for the boundary.
+1. **Keycards**: Various access cards found throughout the heist
+2. **Loot Items**: Cash stacks, gold bars, and bonus items
+3. **Security Devices**: Keycard scanners and access terminals
+4. **Bonus Items**: Special rewards for thorough exploration
+
+### 🔧 Prop Actions
+
+The system supports multiple action types:
+
+* `customFunction`: Execute Lua functions
+* `triggerEvent`: Fire client events
+* `triggerServerEvent`: Fire server events
+
+Each action can include custom parameters and conditions for maximum flexibility.
+
+
+
+This configuration system provides extensive customization options for creating the perfect casino heist experience tailored to your server's needs.

@@ -2,6 +2,7 @@
 description: >-
   An immersive electrical job system featuring unique missions, interactive
   minigames, and a progression-based XP system.
+hidden: true
 ---
 
 # ⚡ Glitch Electrical Job
@@ -13,7 +14,7 @@ description: >-
 <figure><img src="../../.gitbook/assets/glitchstudiosthumbnail electricaljob (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Video Showcase:** [YouTube Demo](https://youtu.be/3O2KEaBLE3Q) _(Note: Video content may reflect earlier version)_
-* **Source Code:** [GitHub Repository](https://github.com/Gl1tchStudios/glitch-electricalJob)
+* **Tebex: \[NOT RELEASED YET - COMING VERY SOON]**
 
 ### 📋 Overview
 
