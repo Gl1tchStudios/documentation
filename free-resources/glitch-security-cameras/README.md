@@ -11,7 +11,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/glitchstudiosthumbnail_security.png" alt=""><figcaption></figcaption></figure>
 
-Video Showcase:&#x20;
+Video Showcase: [https://youtu.be/gFSwj8PcOXE](https://youtu.be/gFSwj8PcOXE)
 
 GitHub Resource: [https://github.com/Gl1tchStudios/glitch-securityCameras](https://github.com/Gl1tchStudios/glitch-securityCameras)
 
