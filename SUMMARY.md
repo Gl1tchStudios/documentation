@@ -30,3 +30,8 @@
 * [🃏 Glitch Casino Heist](paid-resources/glitch-casino-heist/README.md)
   * [Installation](paid-resources/glitch-casino-heist/installation.md)
   * [Configuration](paid-resources/glitch-casino-heist/configuration.md)
+* [🎯 Glitch Entry Point](paid-resources/glitch-entry-point/README.md)
+  * [Installation](paid-resources/glitch-entry-point/installation.md)
+  * [Configuration](paid-resources/glitch-entry-point/configuration/README.md)
+    * [Main Config](paid-resources/glitch-entry-point/configuration/main-config.md)
+    * [Adding Locations](paid-resources/glitch-entry-point/configuration/adding-locations.md)
