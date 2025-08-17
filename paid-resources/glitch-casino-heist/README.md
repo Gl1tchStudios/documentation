@@ -14,7 +14,7 @@ Glitch Casino Heist is a premium, feature-rich heist resource that transforms yo
 
 ### 🎬 Preview & Purchase
 
-<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail lib (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail_casino.png" alt=""><figcaption></figcaption></figure>
 
 * **📺 Video Showcase:** View Demo _(Coming Soon)_
 * **🛒 Purchase:** Tebex Store _(Coming Soon)_

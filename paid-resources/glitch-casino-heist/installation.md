@@ -41,4 +41,4 @@ Ensure your server has the necessary permissions to execute the script and all i
 
 ### Final Notes
 
-Once installation is complete, restart your server to activate the electrical job system. The resource will automatically integrate with your existing framework through Glitch Abstraction.
+Once installation is complete, restart your server to activate the casino heist. The resource will automatically integrate with your existing framework through Glitch Abstraction.

@@ -21,6 +21,10 @@
   * [Installation](free-resources/glitch-security-cameras/installation.md)
   * [Configuration](free-resources/glitch-security-cameras/configuration.md)
   * [Examples](free-resources/glitch-security-cameras/examples.md)
+* [🎁 Glitch Loot Box](free-resources/glitch-loot-box/README.md)
+  * [Installation](free-resources/glitch-loot-box/installation.md)
+  * [Configuration](free-resources/glitch-loot-box/configuration.md)
+  * [Examples](free-resources/glitch-loot-box/examples.md)
 
 ## Paid Resources
 
