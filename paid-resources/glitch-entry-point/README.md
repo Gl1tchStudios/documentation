@@ -1,14 +1,14 @@
----
-hidden: true
----
-
 # 🎯 Glitch Entry Point
 
 A comprehensive tactical training system for FiveM law enforcement, featuring dynamic breach scenarios, hostage situations, and immersive police training environments.
 
-**Entry Point**\
-Video Showcase: \[Coming Soon]\
-Tebex Resource: \[URL]
+**Entry Point**
+
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail4 copy.png" alt=""><figcaption></figcaption></figure>
+
+\
+Video Showcase: [Click Here](https://www.youtube.com/watch?v=z8rF6VZkL30)\
+Tebex Resource: [Click Here](https://glitchstudios.tebex.io/package/7041902)
 
 ### **Overview**
 
