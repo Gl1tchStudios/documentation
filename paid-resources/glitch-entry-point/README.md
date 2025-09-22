@@ -110,7 +110,7 @@ Each training environment includes:
 
 * **ox\_lib**: Modern UI framework for menu systems and notifications
 * **bob74\_ipl**: Interior loading for complex building environments (optional for some maps)
-* **ESX**: Job framework integration for role-based access. May be converted to QB core or other frameworks but that will need to do that manually.
+* **ESX**: Job framework integration for role-based access. **Although you can use Glitch Abstraction to use this resource on QBCore and QBox.** [**More information about Glitch Abstraction.**](../../free-resources/glitch-abstraction/)
 
 #### **Recommended**
 
