@@ -10,7 +10,7 @@ hidden: true
 
 ## Glitch Abstraction  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail lib (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail_abstraction.png" alt=""><figcaption></figcaption></figure>
 
 Glitch Abstraction is a comprehensive abstraction layer for FiveM that seamlessly integrates multiple frameworks, inventory systems, UIs, targeting systems, and more under one unified API. This library allows developers to write code once that works across different frameworks and resource systems without modification.
 
