@@ -10,3 +10,4 @@ The configuration is split across multiple lua files inside of the shared folder
 
 * **`config-main.lua`** - Core gameplay settings, default values, and mechanics
 * `config-client.lua` - Provides edit access to specific client sided functions, especially for changing notifications and other basic functions.
+* `config-server.lua` - Provides edit access to specific server sided functions.
