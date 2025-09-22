@@ -30,7 +30,3 @@ start glitch-entryPoint
 ## 4. Configuration
 
 Feel free to go through all the files inside of the `shared`  folder, these files should be encrypted and provide customisability such as toggles in config-main.lua, locations in config-locations.lua.
-
-## Final Notes <a href="#final-notes" id="final-notes"></a>
-
-Once installation is complete, restart your server to activate the electrical job system. The resource will automatically integrate with your existing framework through Glitch Abstraction.
