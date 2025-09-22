@@ -7,6 +7,7 @@ Before installing this resource, ensure you have the required dependencies:
 * **ESX** - Recommended framework for the resource. This resource is NOT set up for Glitch Abstraction, but you may convert manually as ESX aspects are unencrypted.
 * **OX lib, inventory, and target.**
 * **bob74\_ipl** - Required for spawning interiors and customising them
+* Glitch Abstraction - Required for communication between various frameworks and our scripts. It allows for us to streamline development through the use of an abstraction layer. [Click Here to find out more.](../../free-resources/glitch-abstraction/)
 
 ## Installation Steps <a href="#installation-steps" id="installation-steps"></a>
 
