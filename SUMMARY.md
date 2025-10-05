@@ -25,6 +25,10 @@
   * [Installation](free-resources/glitch-loot-box/installation.md)
   * [Configuration](free-resources/glitch-loot-box/configuration.md)
   * [Examples](free-resources/glitch-loot-box/examples.md)
+* [🛠️ Glitch Spawn Objects](free-resources/glitch-spawn-objects/README.md)
+  * [Installation](free-resources/glitch-spawn-objects/installation.md)
+  * [Configuration](free-resources/glitch-spawn-objects/configuration.md)
+  * [Examples](free-resources/glitch-spawn-objects/examples.md)
 
 ## Paid Resources
 
