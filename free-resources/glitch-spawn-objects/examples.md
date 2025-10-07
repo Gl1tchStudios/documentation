@@ -52,18 +52,44 @@ end
 
 ### Server Exports
 
-<pre class="language-lua"><code class="lang-lua"><strong>-- Spawn object
-</strong><strong>exports['glitch-spawnobjects']:createObject(source, "prop_bench_01a", {
+**Create Object**
+
+|  Parameter | Description                                                                                                                                                           |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| source     | The player ID who is spawning the object                                                                                                                              |
+| model      | The game model name for the object (e.g., "prop\_bench\_01a")                                                                                                         |
+| transform  | <p></p><ul><li><code>position</code> (table): World coordinates {x, y, z}</li><li><code>rotation</code> (table): Euler rotation angles in degrees {x, y, z}</li></ul> |
+| category   | Optional category name for organizing objects (e.g., "park", "furniture")                                                                                             |
+
+<pre class="language-lua"><code class="lang-lua"><strong>exports['glitch-spawnobjects']:createObject(source, "prop_bench_01a", {
 </strong>    position = {x = 100.0, y = 200.0, z = 30.0},
     rotation = {x = 0.0, y = 0.0, z = 45.0}
 }, "park")
+</code></pre>
 
--- Update a object
+**Update Object**
+
+| Parameter | Description                                                                                                                                                                                     |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| source    | The player ID making the update                                                                                                                                                                 |
+| model     | The model name (must match existing object)                                                                                                                                                     |
+| transform | <p></p><p>New positioning data</p><ul><li><code>position</code> (table): Updated world coordinates {x, y, z}</li><li><code>rotation</code> (table): Updated rotation angles {x, y, z}</li></ul> |
+| objectId  | The unique ID of the object to update                                                                                                                                                           |
+
+```lua
 exports['glitch-spawnobjects']:updateObject(source, "prop_bench_01a", {
     position = {x = 150.0, y = 250.0, z = 30.0},
     rotation = {x = 0.0, y = 0.0, z = 90.0}
 }, 123)
+```
 
--- Delete a object
+**Delete Object**
+
+| Parameter | Description                           |
+| --------- | ------------------------------------- |
+| source    | The player ID requesting deletion     |
+| objectId  | The unique ID of the object to delete |
+
+```lua
 exports['glitch-spawnobjects']:deleteObject(source, 123)
-</code></pre>
+```

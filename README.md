@@ -8,19 +8,19 @@ coverY: 0
 
 ## 🚀 Welcome to **Glitch Studios Documentation**
 
-Welcome to **Glitch Studios**, your go to source for high quality FiveM resources and game development tools! Our mission is to provide **powerful, efficient, and customizable** solutions that push the boundaries of what’s possible in FiveM development.
+Welcome to **Glitch Studios**, your go to source for high quality FiveM resources and game development tools! Our mission is to provide **powerful, efficient, and customisable** solutions that push the boundaries of what’s possible in FiveM development.
 
 ### 📖 What You’ll Find Here
 
 This documentation serves as a complete guide to all Glitch Studios resources, including:\
 ✅ **Setup Instructions** – Easy to follow installation guides.\
 ✅ **Exports & APIs** – Integrate seamlessly with your existing scripts.\
-✅ **Customization Options** – Tailor resources to fit your server’s needs.\
+✅ **Customisation Options** – Tailor resources to fit your server’s needs.\
 ✅ **Troubleshooting & FAQs** – Quick fixes for common issues.
 
 ### 🎯 Our Vision
 
-At **Glitch Studios**, we believe in **innovation, collaboration and quality**. Whether you're a solo developer or managing a full scale FiveM server, our tools are built to **enhance gameplay, optimize performance and streamline development**.
+At **Glitch Studios**, we believe in **innovation, collaboration and quality**. Whether you're a solo developer or managing a full scale FiveM server, our tools are built to **enhance gameplay, optimise performance and streamline development**.
 
 ### 💬 Need Help?
 

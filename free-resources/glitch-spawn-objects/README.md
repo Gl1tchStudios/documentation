@@ -7,7 +7,11 @@ description: >-
 
 # 🛠️ Glitch Spawn Objects
 
-### Github: [https://github.com/Gl1tchStudios/glitch-spawnobjects](https://github.com/Gl1tchStudios/glitch-spawnobjects)
+### 📽️ Showcase
+
+{% embed url="https://www.youtube.com/watch?v=E7-THYpyLZs" %}
+
+👾 Github: [https://github.com/Gl1tchStudios/glitch-spawnobjects](https://github.com/Gl1tchStudios/glitch-spawnobjects)
 
 ### ✨ Features
 
@@ -34,4 +38,10 @@ This project is licensed under the **GNU General Public License v3.0** - see the
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+***
+
 For support or inquiries, please join and open a ticket in our [Discord Server](https://discord.com/invite/PAQX8ANEfw).
+
+***
+
+Made with ❤️ by Glitch Studios
