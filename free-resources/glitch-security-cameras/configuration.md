@@ -141,6 +141,6 @@ Retrieves a specific camera's data by its ID.
 
 To setup the camera rotation limits we must first recognize that the x values are -180 to 180 and the z values are 360 degrees. Knowing this we have then included a built-in debug mode which can be toggled on by setting [Config.TestingMode](configuration.md#config.testingmode-boolean) to true. Doing this and then going into a camera will display the current heading and height of where the camera is looking.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 By using this information, we can look at where we want the camera rotation limits to be. We then enter the heading/height into rotationLimits and thus lock the cameras view into a certain area. You must set the rotation of the camera to be looking at a position which is within the two degrees you want the camera to move between e.g. `rotation = vector3(-10.0, 0.0, playerHeading), -- Camera rotation` So here you would set playerHeading to be your characters heading when looking in the direction you want the camera to be looking initially. Once again, this **MUST** between the two degrees you have set for the boundary.

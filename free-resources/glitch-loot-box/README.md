@@ -18,7 +18,7 @@ Github Resource: [https://github.com/Gl1tchStudios/glitch-lootBox](https://githu
 
 Preview of spiner animation:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Overview
 
