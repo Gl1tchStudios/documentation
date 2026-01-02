@@ -9,7 +9,7 @@ Before installing this resource, ensure you have the required dependencies:
 * **Glitch Abstraction** - Essential framework handler that enables compatibility across different FiveM frameworks
   * [Download Glitch Abstraction](../../free-resources/glitch-abstraction/)
 * **Glitch Minigames** - Required for default minigame functionality
-  * [Download Glitch Minigames](../../free-resources/glitch-minigames/)
+  * [Download Glitch Minigames](/broken/pages/5EyQAStLSZRZKT9DEZDq)
 
 > **Important:** Glitch Abstraction is a critical dependency that manages framework compatibility, allowing our resources to seamlessly integrate with your existing server setup.
 

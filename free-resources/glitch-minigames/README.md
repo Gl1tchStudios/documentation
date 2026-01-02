@@ -2,16 +2,21 @@
 description: >-
   A dynamic and modular minigame system for FiveM, featuring interactive
   challenges, seamless integration, and endless customization.
-hidden: true
 ---
 
 # 🧩 Glitch Minigames
 
-## Glitch Minigames [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+{% hint style="info" %}
+## Now updated to include 16 new minigames as part of Glitch Minigames v2
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail2 copy.png" alt=""><figcaption></figcaption></figure>
+## Glitch Minigames v2 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-Video Showcase: [https://youtu.be/NSt7NBNLp2o](https://youtu.be/NSt7NBNLp2o)
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail_minigamesv2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail2 copy (1).png" alt=""><figcaption></figcaption></figure>
+
+Video Showcase: [https://youtu.be/NSt7NBNLp2o](https://youtu.be/NSt7NBNLp2o) (Old Showcase from Glitch Minigames v1)
 
 Github Resource: [https://github.com/Gl1tchStudios/glitch-minigames](https://github.com/Gl1tchStudios/glitch-minigames)
 

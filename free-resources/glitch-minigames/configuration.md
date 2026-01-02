@@ -209,6 +209,323 @@ Returns:
 
 ***
 
+{% hint style="info" %}
+All Minigames below here are apart of the Glitch Minigames v2 Update
+{% endhint %}
+
+### StartMemoryGame
+
+Starts the Memory minigame.
+
+```lua
+exports['glitch-minigames']:StartMemoryGame()
+```
+
+Returns:
+
+| Parameter       | Default | Description                                                |
+| --------------- | ------- | ---------------------------------------------------------- |
+| gridSize        | 5       | Will set the minigame to use a 5x5 grid.                   |
+| numOfSquares    | 8       | Number of squares to show                                  |
+| numOfRounds     | 3       | Number of rounds                                           |
+| showTime        | 3000    | Will show the squares for 3 seconds before they are hidden |
+| maxWrongPresses | 3       | Max wrong presses allowed                                  |
+
+***
+
+### StartSequenceMemoryGame
+
+Starts the Sequence Memory minigame.
+
+```lua
+exports['glitch-minigames']:StartSequenceMemoryGame()
+```
+
+Returns:
+
+| Parameter       | Default | Description                        |
+| --------------- | ------- | ---------------------------------- |
+| gridSize        | 4       | Size of the grid (e.g., 4 for 4x4) |
+| numOfRounds     | 5       | Number of rounds                   |
+| maxWrongPresses | 3       | Max wrong presses allowed          |
+| showTime        | 1000    | Time each round is shown (in ms)   |
+| delayBetween    | 300     | Delay between rounds (in ms)       |
+
+***
+
+### StartVerbalMemoryGame
+
+Starts the Verbal Memory minigame.
+
+```lua
+exports['glitch-minigames']:StartVerbalMemoryGame()
+```
+
+Returns:
+
+| Parameter   | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| maxStrikes  | 3       | Number of max strikes           |
+| numOfWords  | 50      | Total words to show             |
+| timePerWord | 5000    | Time each word is shown (in ms) |
+
+
+
+***
+
+### StartNumberedSequenceGame
+
+Starts the Numbered Sequence minigame.
+
+```lua
+exports['glitch-minigames']:StartNumberedSequenceGame()
+```
+
+Returns:
+
+| Parameter       | Default | Description                        |
+| --------------- | ------- | ---------------------------------- |
+| gridSize        | 4       | Size of the grid (e.g., 4 for 4x4) |
+| sequenceLength  | 6       | Length of number sequence          |
+| numOfRounds     | 3       | Number of rounds                   |
+| showTime        | 4000    | Time to show the sequence (in ms)  |
+| answerTime      | 10000   | Time to input the sequence (in ms) |
+| maxWrongPresses | 3       | Max wrong presses allowed          |
+
+***
+
+### StartSymbolSearchGame
+
+Starts the Symbol Search minigame.
+
+```lua
+exports['glitch-minigames']:StartSymbolSearchGame()
+```
+
+Returns:
+
+| Parameter     | Default   | Description                                                                                                                  |
+| ------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| gridSize      | 8         | Size of the grid (e.g., 8 for 8x8)                                                                                           |
+| shiftInterval | 1000      | Time in ms between symbol shifts                                                                                             |
+| timeLimit     | 30000     | Time limit (in ms)                                                                                                           |
+| minKeyLength  | 1         | Minimum length of the symbol key                                                                                             |
+| maxKeyLength  | 3         | Maximum length of the symbol key                                                                                             |
+| symbolType    | "symbols" | There is four different symbol types you can choose from this includes "symbols", "letters", "numbers", "emojis" and "dots". |
+
+***
+
+### StartPipePressureGame
+
+Starts the Pipe Pressure minigame.
+
+```lua
+exports['glitch-minigames']:StartPipePressureGame()
+```
+
+Returns:
+
+| Parameter | Default | Description                        |
+| --------- | ------- | ---------------------------------- |
+| gridSize  | 6       | Size of the grid (e.g., 6 for 6x6) |
+| timeLimit | 30000   | Time limit (in ms)                 |
+
+***
+
+### StartPairsGame
+
+Starts the Pairs minigame.
+
+```lua
+exports['glitch-minigames']:StartPairsGame()
+```
+
+Returns:
+
+| Parameter       | Default | Description                           |
+| --------------- | ------- | ------------------------------------- |
+| gridSize        | 4       | Size of the grid (e.g., 4 for 4x4)    |
+| timeLimit       | 120000  | Time limit (in ms) or 0 for unlimited |
+| maxWrongPresses | 0       | Max attempts or 0 for unlimited       |
+
+***
+
+### StartMemoryColorsGame
+
+Starts the Memory Colors minigame.
+
+```lua
+exports['glitch-minigames']:StartMemoryColorsGame()
+```
+
+Returns:
+
+| Parameter    | Default | Description                        |
+| ------------ | ------- | ---------------------------------- |
+| gridSize     | 5       | Size of the grid (e.g., 5 for 5x5) |
+| memorizeTime | 5000    | Time to memorize colors            |
+| answerTime   | 10000   | Time to answer                     |
+| numOfRounds  | 3       | Number of rounds                   |
+
+***
+
+### StartUntangleGame
+
+Starts the Untangle minigame.
+
+```lua
+exports['glitch-minigames']:StartUntangleGame()
+```
+
+Returns:
+
+| Parameter | Default | Description                 |
+| --------- | ------- | --------------------------- |
+| nodeCount | 8       | Number of nodes to untangle |
+| timeLimit | 60000   | Time limit (in ms)          |
+
+***
+
+### StartFingerprintGame
+
+Starts the Fingerprint minigame.
+
+```lua
+exports['glitch-minigames']:StartFingerprintGame()
+```
+
+Returns:
+
+| Parameter            | Default | Description                                              |
+| -------------------- | ------- | -------------------------------------------------------- |
+| timeLimit            | 30000   | Time limit (in ms)                                       |
+| showAlignedCount     | true    | Makes it so the aligned count is shown, default true     |
+| showCorrectIndicator | true    | Makes it so the correct indicator is shown, default true |
+
+***
+
+### StartCodeCrackGame
+
+Starts the Code Crack minigame.
+
+```lua
+exports['glitch-minigames']:StartCodeCrackGame()
+```
+
+Returns:
+
+| Parameter   | Default | Description              |
+| ----------- | ------- | ------------------------ |
+| timeLimit   | 60000   | Time limit (in ms)       |
+| digitCount  | 4       | Number of digits in code |
+| maxAttempts | 6       | Max attempts allowed     |
+
+***
+
+### StartWordCrackGame
+
+Starts the Word Crack minigame.
+
+```lua
+exports['glitch-minigames']:StartWordCrackGame()
+```
+
+Returns:
+
+| Parameter   | Default | Description                                                                                                                                                                                           |
+| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeLimit   | 120000  | Time limit (in ms)                                                                                                                                                                                    |
+| wordCount   | 5       | <p>Number of letters in word.</p><p></p><p>(This should not be changed as the words list only contains 5 letter words so changing this would require you to update the word list in wordCrack.js)</p> |
+| maxAttempts | 6       | Max attempts allowed                                                                                                                                                                                  |
+
+***
+
+### StartBalanceGame
+
+Starts the Balance minigame.
+
+```lua
+exports['glitch-minigames']:StartBalanceGame()
+```
+
+Returns:
+
+| Parameter       | Default | Description                          |
+| --------------- | ------- | ------------------------------------ |
+| timeLimit       | 10000   | Time limit (in ms)                   |
+| driftSpeed      | 3       | How fast needle drifts               |
+| sensitivity     | 8       | How much Q/E moves needle            |
+| greenZoneWidth  | 30      | Width of safe green zone             |
+| yellowZoneWidth | 25      | Width of warning yellow zone         |
+| driftRandomness | 2       | How unpredictable the drift is       |
+| maxDangerTime   | 1000    | Time allowed in red before fail (ms) |
+
+***
+
+### StartAimTestGame
+
+Starts the Aim Test minigame.
+
+```lua
+exports['glitch-minigames']:StartAimTestGame()
+```
+
+Returns:
+
+| Parameter      | Default | Description                             |
+| -------------- | ------- | --------------------------------------- |
+| timeLimit      | 30000   | Time limit (in ms)                      |
+| targetsToHit   | 10      | Number of targets to win                |
+| targetLifetime | 1500    | How long target stays (ms)              |
+| targetSize     | 60      | Target diameter in pixels               |
+| shrinkTarget   | true    | Whether target shrinks over time        |
+| maxMisses      | 5       | Max missed targets before fail          |
+| timePenalty    | 0       | Time removed on miss (ms), 0 = disabled |
+
+***
+
+### StartCircleClickGame
+
+Starts the Circle Click minigame.
+
+```lua
+exports['glitch-minigames']:StartAimTestGame()
+```
+
+Returns:
+
+| Parameter          | Default              | Description                   |
+| ------------------ | -------------------- | ----------------------------- |
+| numOfRounds        | 5                    | Number of rounds to complete  |
+| rotationSpeed      | 2                    | Degrees per frame             |
+| targetZoneSize     | 45                   | Target zone in degrees        |
+| maxFailures        | 3                    | Max failures before game over |
+| speedIncrease      | 0.15                 | Speed increase per round      |
+| randomizeDirection | true                 | Randomize rotation direction  |
+| keys               | {'W', 'A', 'S', 'D'} | Possible keys to display      |
+
+***
+
+### StartLockpickGame
+
+Starts the Lockpick minigame.
+
+```lua
+exports['glitch-minigames']:StartLockpickGame()
+```
+
+Returns:
+
+| Parameter     | Default | Description                                    |
+| ------------- | ------- | ---------------------------------------------- |
+| numOfRounds   | 3       | Number of locks to pick                        |
+| sweetSpotSize | 30      | Sweet spot size in degrees (smaller = harder)  |
+| maxFailures   | 2       | Max failures before game over                  |
+| shakeRange    | 40      | How far from sweet spot shake starts (degrees) |
+| lockTime      | 500     | How long to hold to lock (ms)                  |
+
+***
+
 ## Testing Usage
 
 ```lua
