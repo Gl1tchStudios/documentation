@@ -14,6 +14,8 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/glitchstudiosthumbnail_minigamesv2.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail2 copy (1).png" alt=""><figcaption></figcaption></figure>
+
 Video Showcase: [https://youtu.be/NSt7NBNLp2o](https://youtu.be/NSt7NBNLp2o) (Old Showcase from Glitch Minigames v1)
 
 Github Resource: [https://github.com/Gl1tchStudios/glitch-minigames](https://github.com/Gl1tchStudios/glitch-minigames)
