@@ -1,10 +1,10 @@
-# 🎯 Glitch Entry Point
+# 🎯 Glitch Police Training
 
 A comprehensive tactical training system for FiveM law enforcement, featuring dynamic breach scenarios, hostage situations, and immersive police training environments.
 
-**Entry Point**
+**Police Training**
 
-<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail4 copy.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/glitchstudiosthumbnail_policetraining.png" alt=""><figcaption></figcaption></figure>
 
 \
 Video Showcase: [Click Here](https://www.youtube.com/watch?v=z8rF6VZkL30)\
@@ -12,7 +12,7 @@ Tebex Resource: [Click Here](https://glitchstudios.tebex.io/package/7041902)
 
 ### **Overview**
 
-**Entry Point** is a sophisticated tactical training resource designed specifically for FiveM police roleplay servers. This system provides realistic breach-and-clear scenarios, hostage rescue operations, and comprehensive tactical training environments. With support for both exterior and interior maps, dynamic AI behaviour, and fully configurable difficulty settings, Entry Point transforms police training from basic shooting ranges into immersive, scenario-based learning experiences.
+Police Training is a sophisticated tactical training resource designed specifically for FiveM police roleplay servers. This system provides realistic breach-and-clear scenarios, hostage rescue operations, and comprehensive tactical training environments. With support for both exterior and interior maps, dynamic AI behaviour, and fully configurable difficulty settings, Police Training transforms police training from basic shooting ranges into immersive, scenario-based learning experiences.
 
 ### **Features**
 

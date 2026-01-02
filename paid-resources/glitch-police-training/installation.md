@@ -24,7 +24,7 @@ Verify that all required dependencies listed in the prerequisites section are pr
 Add the resource to your `server.cfg` file:
 
 ```
-start glitch-entryPoint
+start glitch-policeTraining
 ```
 
 ## 4. Configuration

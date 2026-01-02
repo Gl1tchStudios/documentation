@@ -2,7 +2,7 @@
 
 ## 🔧 Configuration Guide <a href="#configuration-guide" id="configuration-guide"></a>
 
-The Entry Point script offers extensive customisation options through two main configuration files. This guide will walk you through each configuration option to help you set up the perfect job experience for your server.
+The Police Training script offers extensive customisation options through two main configuration files. This guide will walk you through each configuration option to help you set up the perfect job experience for your server.
 
 ## 📁 Configuration Files
 

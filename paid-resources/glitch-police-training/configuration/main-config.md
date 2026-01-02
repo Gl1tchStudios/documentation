@@ -1,6 +1,6 @@
 # Main Config
 
-This guide will help you understand and modify the configuration for the Entry Point training system, a tactical police training resource for FiveM servers.
+This guide will help you understand and modify the configuration for the Police Training training system, a tactical police training resource for FiveM servers.
 
 ### Table of Contents
 
@@ -164,7 +164,7 @@ Config.defaultRadio = 997
 
 #### Notification Settings
 
-<pre class="language-lua"><code class="lang-lua"><strong>Config.notifyTitle = 'Entry Point'
+<pre class="language-lua"><code class="lang-lua"><strong>Config.notifyTitle = 'Police Training'
 </strong>Config.notifyAnimation = 'beatFade'
 Config.notifyIcon = 'fa-solid fa-person-rifle'
 </code></pre>
