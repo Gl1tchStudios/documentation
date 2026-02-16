@@ -4,7 +4,7 @@ A dynamic house robbery system for FiveM featuring progressive XP-based leveling
 
 **House Robbery**
 
-<figure><img src="../../.gitbook/assets/HouseRobbery.png" alt=""><figcaption></figcaption></figure>
+{% embed url="https://www.youtube.com/watch?v=MyzCRI_nm0M" %}
 
 \
 Video Showcase: [Click Here](https://youtu.be/MyzCRI_nm0M)\
@@ -52,7 +52,7 @@ The phone-related functions are located in the open source files and can be easi
 
 For more help regarding if your phone system works with our script, feel free to open a ticket in our discord.
 
-### **💖 Special Thanks**
+## **💖 Special Thanks**
 
 We extend our appreciation to the FiveM development community for their continued innovation in criminal roleplay resources. Special recognition goes to:
 

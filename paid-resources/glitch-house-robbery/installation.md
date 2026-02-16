@@ -20,7 +20,7 @@ Clone the repository to your local machine.
 
 #### 2. Dependencies
 
-Verify that all required dependencies listed in the prerequisites section are properly installed and running on your server prior to starting Entry Point.
+Verify that all required dependencies listed in the prerequisites section are properly installed and running on your server prior to starting the script.
 
 #### 3. Server Configuration
 
