@@ -44,3 +44,7 @@
   * [Configuration](paid-resources/glitch-police-training/configuration/README.md)
     * [Main Config](paid-resources/glitch-police-training/configuration/main-config.md)
     * [Adding Locations](paid-resources/glitch-police-training/configuration/adding-locations.md)
+* [💰 Glitch House Robbery](paid-resources/glitch-house-robbery/README.md)
+  * [Installation](paid-resources/glitch-house-robbery/installation.md)
+  * [Configuration](paid-resources/glitch-house-robbery/configuration/README.md)
+    * [Main Config](paid-resources/glitch-house-robbery/configuration/main-config.md)
