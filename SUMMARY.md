@@ -48,3 +48,4 @@
   * [Installation](paid-resources/glitch-house-robbery/installation.md)
   * [Configuration](paid-resources/glitch-house-robbery/configuration/README.md)
     * [Main Config](paid-resources/glitch-house-robbery/configuration/main-config.md)
+  * [Commands & Exports](paid-resources/glitch-house-robbery/commands-and-exports.md)

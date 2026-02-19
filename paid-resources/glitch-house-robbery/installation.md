@@ -61,3 +61,25 @@ Feel free to go through all the files inside of the **shared** folder and the **
   * Phone notification integration (adapt for your phone resource if not using lb-phone)
   * Police alert system integration
   * Framework-specific server functions
+
+#### **5.** Inventory Item Setup (Lockpick)
+
+This resource requires a **lockpick item** to be added into your inventory system so players can begin breaking into houses.
+
+`ox_inventory/data/items.lua`
+
+```lua
+['lockpick'] = {
+    label = 'Lockpick',
+    weight = 150,
+    consume = 0,
+    description = 'A general-purpose tool for gaining entry to locked areas or items',
+    server = {
+        export = 'glitch-houserobbery.useLockpick'
+    }
+},
+```
+
+* This item is required for the lockpicking mechanic to function.
+* The server.export links directly into the house robbery system, allowing the lockpick to trigger the entry minigame.
+* You can rename the item, change weight, or adjust the description if desired - just make sure the item name matches what’s used in the script config.
