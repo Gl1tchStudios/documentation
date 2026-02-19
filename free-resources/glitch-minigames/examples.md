@@ -25,7 +25,7 @@ local success = exports['glitch-minigames']:StartFirewallPulse(3, 2, 10, 8, 30, 
 
 <figure><img src="../../.gitbook/assets/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3930383532353435393634303239393536302f313335343738303330303536373234383933382f696d6167652e706e673f65783d36376538383333612669733d3637653733 (1).png" alt=""><figcaption></figcaption></figure>
 
-🧠 Backdoor Sequence
+#### 🧠 Backdoor Sequence
 
 ```lua
 local success = exports['glitch-minigames']:StartBackdoorSequence(3, 20, 20, 3, 2.0, 3, 6, {'W', 'A', 'S', 'D'}, 'W, A, S, D only')
@@ -182,7 +182,7 @@ All Minigames below here are apart of the Glitch Minigames v2 Update
 
 <figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
-### 🧠 Memory Game
+#### 🧠 Memory Game
 
 ```lua
 local success = exports['glitch-minigames']:StartMemoryGame()
@@ -203,7 +203,7 @@ local success = exports['glitch-minigames']:StartMemoryGame(5, 8, 3, 3000, 3)
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-### 📝 Sequence Memory Game
+#### 📝 Sequence Memory Game
 
 ```lua
 local success = exports['glitch-minigames']:StartSequenceMemoryGame()
@@ -224,7 +224,7 @@ local success = exports['glitch-minigames']:StartSequenceMemoryGame(4, 5, 3, 100
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-### 💬 Verbal Memory Game
+#### 💬 Verbal Memory Game
 
 ```lua
 local success = exports['glitch-minigames']:StartVerbalMemoryGame()
@@ -245,7 +245,7 @@ local success = exports['glitch-minigames']:StartVerbalMemoryGame(3, 50, 5000)
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-### 🔢 Numbered Sequence Game
+#### 🔢 Numbered Sequence Game
 
 ```lua
 local success = exports['glitch-minigames']:StartNumberedSequenceGame()
@@ -266,7 +266,7 @@ local success = exports['glitch-minigames']:StartNumberedSequenceGame(4, 6, 3, 4
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-### 🔍 Symbol Search Game
+#### 🔍 Symbol Search Game
 
 ```lua
 local success = exports['glitch-minigames']:StartSymbolSearchGame()
@@ -287,7 +287,7 @@ local success = exports['glitch-minigames']:StartSymbolSearchGame(8, 1000, 30000
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-### 🚰 Pipe Pressure Game
+#### 🚰 Pipe Pressure Game
 
 ```lua
 local success = exports['glitch-minigames']:StartPipePressureGame()
@@ -308,7 +308,7 @@ local success = exports['glitch-minigames']:StartPipePressureGame(6, 30000)
 
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
-### 🃏 Pairs Game
+#### 🃏 Pairs Game
 
 ```lua
 local success = exports['glitch-minigames']:StartPairsGame()
@@ -329,7 +329,7 @@ local success = exports['glitch-minigames']:StartPairsGame(4, 120000, 0)
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-### 🎨 Memory Colors Game
+#### 🎨 Memory Colors Game
 
 ```lua
 local success = exports['glitch-minigames']:StartMemoryColorsGame()
@@ -350,7 +350,7 @@ local success = exports['glitch-minigames']:StartMemoryColorsGame(5, 5000, 10000
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
-### 🪢 Untangle Game
+#### 🪢 Untangle Game
 
 ```lua
 local success = exports['glitch-minigames']:StartUntangleGame()
@@ -371,7 +371,7 @@ local success = exports['glitch-minigames']:StartUntangleGame(8, 60000)
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-### 👆 Fingerprint Game
+#### 👆 Fingerprint Game
 
 ```lua
 local success = exports['glitch-minigames']:StartFingerprintGame()
@@ -392,7 +392,7 @@ local success = exports['glitch-minigames']:StartFingerprintGame(30000, true, tr
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-### 🔐 Code Crack Game
+#### 🔐 Code Crack Game
 
 ```lua
 local success = exports['glitch-minigames']:StartCodeCrackGame()
@@ -413,7 +413,7 @@ local success = exports['glitch-minigames']:StartCodeCrackGame(60000, 4, 6)
 
 <figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
-### 📝 Word Crack Game
+#### 📝 Word Crack Game
 
 ```lua
 local success = exports['glitch-minigames']:StartWordCrackGame()
@@ -434,7 +434,7 @@ local success = exports['glitch-minigames']:StartWordCrackGame(120000, 5, 6)
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-### ⚖️ Balance Game
+#### ⚖️ Balance Game
 
 ```lua
 local success = exports['glitch-minigames']:StartBalanceGame()
@@ -455,7 +455,7 @@ local success = exports['glitch-minigames']:StartBalanceGame(10000, 3, 8, 30, 25
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
-### 🎯 Aim Test Game
+#### 🎯 Aim Test Game
 
 ```lua
 local success = exports['glitch-minigames']:StartAimTestGame()
@@ -476,7 +476,7 @@ local success = exports['glitch-minigames']:StartAimTestGame(30000, 10, 1500, 60
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-### ⭕ Circle Click Game
+#### ⭕ Circle Click Game
 
 ```lua
 local success = exports['glitch-minigames']:StartCircleClickGame()
@@ -497,7 +497,7 @@ local success = exports['glitch-minigames']:StartCircleClickGame(5, 2, 45, 3, 0.
 
 <figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
-### 🔓 Lockpick Game
+#### 🔓 Lockpick Game
 
 ```lua
 local success = exports['glitch-minigames']:StartLockpickGame()
