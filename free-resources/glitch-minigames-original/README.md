@@ -2,9 +2,10 @@
 description: >-
   A dynamic and modular minigame system for FiveM, featuring interactive
   challenges, seamless integration, and endless customization.
+hidden: true
 ---
 
-# 🧩 Glitch Minigames
+# 🧩 Glitch Minigames Original
 
 {% hint style="info" %}
 ## Now updated to include 16 new minigames as part of Glitch Minigames v2
