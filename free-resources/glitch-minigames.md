@@ -6,6 +6,12 @@ description: >-
 
 # 🧩 Glitch Minigames
 
+{% hint style="danger" %}
+**The Glitch Minigames documentation has a new home! We've moved everything to a live demo site so you can test each minigame yourself, making the setup process easier than ever.**\
+\
+**Check it out and test it live here:** [**https://minigames.glitchstudios.dev/**](https://minigames.glitchstudios.dev/)
+{% endhint %}
+
 {% hint style="info" %}
 ## Now updated to include 16 new minigames as part of Glitch Minigames v2
 {% endhint %}
@@ -23,13 +29,6 @@ Glitch Minigames v2 Video Showcase: [https://youtu.be/eLzK9U9jpqo](https://youtu
 Github Resource: [https://github.com/Gl1tchStudios/glitch-minigames](https://github.com/Gl1tchStudios/glitch-minigames)
 
 
-
-{% hint style="danger" %}
-The Glitch Minigames documentation has a new home! We've moved everything to a live demo site so you can test each minigame yourself, making the setup process easier than ever.\
-\
-Check it out and test it live here: [https://minigames.glitchstudios.dev/](https://minigames.glitchstudios.dev/)
-----------------------------------------------------------------------------------------------------------------
-{% endhint %}
 
 ***
 
