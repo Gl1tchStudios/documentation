@@ -2,7 +2,6 @@
 description: >-
   An immersive electrical job system featuring unique missions, interactive
   minigames, and a progression-based XP system.
-hidden: true
 ---
 
 # ⚡ Glitch Electrical Job
@@ -13,8 +12,8 @@ hidden: true
 
 <figure><img src="../../.gitbook/assets/glitchstudiosthumbnail electricaljob (1).png" alt=""><figcaption></figcaption></figure>
 
-* **Video Showcase:** [YouTube Demo](https://youtu.be/3O2KEaBLE3Q) _(Note: Video content may reflect earlier version)_
-* **Tebex: \[NOT RELEASED YET - COMING VERY SOON]**
+* **Video Showcase:** [YouTube Demo](https://www.youtube.com/watch?v=_29liI_ykRo)
+* **Tebex:** [**Click Here**](https://glitchstudios.tebex.io/package/7332694)
 
 ### 📋 Overview
 
@@ -24,7 +23,7 @@ Bring realistic electrical work to your server with this comprehensive job syste
 
 #### 🔧 **Dynamic Mission System**
 
-* **Five Unique Repair Contracts** – From residential wiring to industrial electrical systems
+* **Six Unique Repair Contracts** – From residential wiring to industrial electrical systems
 * **Diverse Location Pool** – Randomized job sites ensure every shift feels fresh and challenging
 * **Authentic Repair Scenarios** – Realistic electrical problems requiring different skill sets
 
